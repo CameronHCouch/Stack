@@ -10,6 +10,7 @@
 # Ignnore bundle
 bundle.js
 bundle.js.map
+bundle.js*
 
 # Ignore webpackified js and node modules
 /node_modules/
