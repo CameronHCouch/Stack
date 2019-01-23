@@ -1,0 +1,43 @@
+import React from 'react';
+import { merge } from 'lodash';
+import { Link, NavLink } from 'react-router-dom';
+
+class HeaderNav extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { email: "", password: "" };
+  };
+
+  navSession(){
+    return (this.props.currentUser ? (
+        <Link className="btn" to="/signup">Your Workspaces</Link>
+    ) : (
+        <div>
+          <Link to="/session">Sign in</Link>
+          <Link className="btn header-btn" to="/signup">GET STARTED</Link>
+        </div>
+      )
+    );
+  }
+
+  render() {
+    return (
+      <header className="nav-bar">
+        <img className="logo-img" src="https://s3.us-east-2.amazonaws.com/couchstack/logo_text.png" />
+        <nav>
+          <ul className="nav-links">
+            <li><Link to="#">Why Cameron?</Link></li>
+            <li><a href="https://www.linkedin.com/in/cameroncouch/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/CameronHCouch/" target="_blank">GitHub</a></li>
+          </ul>
+      
+          <section className="nav-session">
+            {this.navSession()}
+          </section>
+        </nav>
+      </header>
+    )
+  }
+}
+
+export default HeaderNav;

@@ -13,5 +13,88 @@
  *= require_tree .
  *= require_self
  */
-
  
+ 
+header {
+   padding: 14px;
+   font-family: 'Montserrat', "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+h1 {
+  font-family: 'Montserrat', "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.nav-bar{
+  display: flex;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo-img{
+  width: 125px;
+  height: 51.172px;
+  margin-left: 30px;
+  margin-right: 10px;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav-links > li {
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(69,69,69);
+  font-family: 'Montserrat', "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif
+}
+
+.nav-links > li:hover{
+  color: black;
+  transition: 0.3s;
+  transition-timing-function: ease;
+}
+
+.nav-session{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btn{
+  background-color: rgb(97, 31, 105);
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  padding: 16px 12px;
+  border-radius: 4px;
+  /* Transition-duration: 0.42s, 0.42s, 0.42s;
+  Transition-property: box-shadow, color, background;
+  Transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1), cubic-bezier(0.165, 0.84, 0.44, 1), cubic-bezier(0.165, 0.84, 0.44, 1) */
+
+}
+
+.header-btn{
+  margin: 30px;
+}
+
+.small-splash-img{
+  width: 251px;
+}
+
+.big-splash-img{
+  width: 502px;
+}
+
+.medium-splash-img{
+  width: 316px;
+}
