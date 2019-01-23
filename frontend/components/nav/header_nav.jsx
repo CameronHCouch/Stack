@@ -13,7 +13,7 @@ class HeaderNav extends React.Component {
         <Link className="btn" to="/signup">Your Workspaces</Link>
     ) : (
         <div>
-          <Link to="/session">Sign in</Link>
+          <Link to="/login">Sign in</Link>
           <Link className="btn header-btn" to="/signup">GET STARTED</Link>
         </div>
       )

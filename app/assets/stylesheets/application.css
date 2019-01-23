@@ -25,6 +25,7 @@ h1 {
   font-size: 64px;
   font-weight: 700;
   text-align: center;
+  margin-top: 45px;
 }
 
 .nav-bar{
@@ -75,7 +76,6 @@ nav{
   font-weight: 600;
   font-size: 14px;
   text-align: center;
-  padding: 16px 12px;
   border-radius: 4px;
   /* Transition-duration: 0.42s, 0.42s, 0.42s;
   Transition-property: box-shadow, color, background;
@@ -85,16 +85,86 @@ nav{
 
 .header-btn{
   margin: 30px;
+  padding: 16px 12px;
+}
+
+.splash{
+  font-family: 'Montserrat', "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
+  color: black;
 }
 
 .small-splash-img{
   width: 251px;
+  position: absolute;
+  top: 230px;
+  left: 80px;
+  z-index: -1;
+
 }
 
 .big-splash-img{
   width: 502px;
+  height: 502px;
+  position: relative;
 }
 
 .medium-splash-img{
   width: 316px;
+  height: 316px;
+  position: relative;
+}
+
+p {
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 5px 90px 35px 0px;
+}
+
+.splash-main{
+  display: flex;
+}
+
+.right-splash{
+  margin-left: -15px;
+}
+
+.app-description{
+  max-width: 440px;
+  margin-bottom: -10px;
+}
+
+aside{
+  margin-top: 5px;
+  margin-bottom: 35px;
+  font-size: 14px;
+}
+
+aside > a {
+  color: #1264a3;
+  text-decoration: underline;
+}
+
+input[type=text]{
+  padding: 18.4px 16px;
+  border: 1px solid rgb(105,105,105);
+  border-radius: 4px;
+}
+
+.get-started-btn{
+  margin: 30px;
+  padding: 19px 40px 20px 40px;
+}
+
+figcaption{
+  font-size: 13px;
+  color:rgb(105,105,105)
+}
+
+figure{
+    margin-left: 195px;
+}
+
+.session-form{
+  margin-bottom: -40px;
 }

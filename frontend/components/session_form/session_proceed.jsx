@@ -2,7 +2,7 @@ import React from 'react';
 import { merge } from 'lodash';
 import { Link } from 'react-router-dom';
 
-class SessionForm extends React.Component {
+class SessionProceed extends React.Component {
   constructor(props) {
     super(props);
     this.state = { email: "", password: "" };
@@ -19,11 +19,13 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-      this.props.history.push('/session-proceed');
+    const user = merge({}, this.state);
+    this.props.processForm(user).then(() =>
+      this.props.history.replace('/'));
   }
 
-  updateEmail(e) {
-    this.setState({ email: e.currentTarget.value })
+  updatePassword(e) {
+    this.setState({ password: e.currentTarget.value })
   }
 
   render() {
@@ -33,10 +35,10 @@ class SessionForm extends React.Component {
           {this.errors()}
         </ul>
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <label id="email">
-          <input type='text' onChange={this.updateEmail.bind(this)} htmlFor="email" placeholder="Email address" />
+          <label id="password">
+            <input type='text' onChange={this.updatePassword.bind(this)} htmlFor="password" placeholder="password" />
           </label>
-          <button className="get-started-btn btn" type="submit">GET STARTED</button>
+          <button className="continue-btn btn" type="submit">Continue</button>
         </form>
         <br />
       </div>
@@ -44,4 +46,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default SessionForm;
+export default SessionProceed;
