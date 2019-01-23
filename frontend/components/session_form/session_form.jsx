@@ -19,7 +19,12 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-      this.props.history.push('/session-proceed');
+      this.props.receiveEmail(this.state.email);
+      if (this.props.match.path === '/login') {
+      this.props.history.replace('/session-proceed');
+      } else {
+        this.props.history.replace('/user-proceed')
+      }
   }
 
   updateEmail(e) {

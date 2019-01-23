@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import SessionForm from './session_form';
-import { login } from '../../actions/session_actions';
+import { login, clearErrors } from '../../actions/session_actions';
+import { receiveEmail } from '../../actions/ui_actions';
 import { withRouter } from 'react-router-dom';
 
 const msp = (state) => {
@@ -12,7 +13,9 @@ const msp = (state) => {
 
 const mdp = dispatch => {
   return {
-    processForm: (user) => dispatch(login(user))
+    processForm: (user) => dispatch(login(user)),
+    receiveEmail: (email) => dispatch(receiveEmail(email)),
+    clearErrors: () => dispatch(clearErrors())
   }
 }
 

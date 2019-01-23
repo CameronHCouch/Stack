@@ -10,7 +10,10 @@ class HeaderNav extends React.Component {
 
   navSession(){
     return (this.props.currentUser ? (
-        <Link className="btn" to="/signup">Your Workspaces</Link>
+      <div>
+        <button onClick={() => this.props.logout()}>Sign Out</button>
+        <Link className="btn" to="/">Your Workspaces</Link>
+      </div>
     ) : (
         <div>
           <Link to="/login">Sign in</Link>
@@ -23,7 +26,9 @@ class HeaderNav extends React.Component {
   render() {
     return (
       <header className="nav-bar">
-        <img className="logo-img" src="https://s3.us-east-2.amazonaws.com/couchstack/logo_text.png" />
+        <Link to="/">
+          <img className="logo-img" src="https://s3.us-east-2.amazonaws.com/couchstack/logo_text.png" />
+        </Link>
         <nav>
           <ul className="nav-links">
             <li><Link to="#">Why Cameron?</Link></li>

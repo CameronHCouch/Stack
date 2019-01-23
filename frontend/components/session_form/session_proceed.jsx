@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 class SessionProceed extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { email: "", password: "" };
+    this.state = props.user;
   };
 
   errors() {
@@ -19,8 +19,7 @@ class SessionProceed extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = merge({}, this.state);
-    this.props.processForm(user).then(() =>
+    this.props.processForm(this.state).then(() =>
       this.props.history.replace('/'));
   }
 
@@ -36,7 +35,7 @@ class SessionProceed extends React.Component {
         </ul>
         <form onSubmit={this.handleSubmit.bind(this)}>
           <label id="password">
-            <input type='text' onChange={this.updatePassword.bind(this)} htmlFor="password" placeholder="password" />
+            <input type='password' onChange={this.updatePassword.bind(this)} htmlFor="password" placeholder="password" />
           </label>
           <button className="continue-btn btn" type="submit">Continue</button>
         </form>
