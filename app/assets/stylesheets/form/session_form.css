@@ -76,6 +76,11 @@
   max-width: 369.250px;
 }
 
+.login-form form .get-started-btn{
+  max-width: 369.250px;
+  
+}
+
 .login-form form .demo-btn:hover{
   background-color: #4a154b;
 }
