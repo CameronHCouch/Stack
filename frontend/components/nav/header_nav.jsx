@@ -17,7 +17,7 @@ class HeaderNav extends React.Component {
     ) : (
         <div>
           <Link to="/login">Sign in</Link>
-          <Link className="btn header-btn" to="/session">GET STARTED</Link>
+          <Link className="btn header-btn" to="/signup">GET STARTED</Link>
         </div>
       )
     );

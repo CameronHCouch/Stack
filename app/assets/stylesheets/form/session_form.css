@@ -36,7 +36,11 @@
 
 .proceed-form, .login-form > form{
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
+}
+
+.login-form > form{
+  margin-top: -259px;
 }
 
 .confirm-btn, .login-form form button{
@@ -58,4 +62,33 @@
 
 .find-team{
   width: 300px;
+}
+
+.error{
+  margin-top: 15px;
+  margin-bottom: -10px;
+  color: #611f69;
+  font-weight: 600;
+}
+
+.login-form form .demo-btn{
+  background-color: #611f69;
+  max-width: 369.250px;
+}
+
+.login-form form .demo-btn:hover{
+  background-color: #4a154b;
+}
+
+.login-form form .demo-btn:focus{
+  outline-color: rgb(156, 114, 161);
+  outline-offset: 3px;
+  outline-style: dotted;
+  outline-width: 1.5px;
+}
+
+.login-form form button{
+  width: 100%;
+  display: block;
+  margin: 5px 0;
 }

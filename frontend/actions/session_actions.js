@@ -4,6 +4,7 @@ export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_ERRORS"
 export const CLEAR_ERRORS = "CLEAR_ERRORS";
+export const NO_EMAIL_ERROR = "NO_EMAIL_ERROR";
 
 export const login = user => dispatch => {
   return SessionAPIUtil.login(user).then(
@@ -44,5 +45,11 @@ const receiveErrors = (errors) => {
 export const clearErrors = () => {
   return{
     type: CLEAR_ERRORS
+  }
+}
+
+export const noEmailError = () => {
+  return{
+    type: NO_EMAIL_ERROR
   }
 }

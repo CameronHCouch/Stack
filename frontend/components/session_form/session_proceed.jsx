@@ -18,6 +18,10 @@ class SessionProceed extends React.Component {
     }
   }
 
+  componentDidMount() {
+    this.props.clearErrors();
+  }
+  
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state).then(() =>
