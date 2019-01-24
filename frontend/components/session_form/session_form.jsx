@@ -21,7 +21,7 @@ class SessionForm extends React.Component {
     if (Boolean(this.state.email)) { 
       this.props.receiveEmail(this.state.email);
       if (this.props.match.path === '/login') {
-        this.props.history.replace('/login/proceed');
+        this.props.match.path.push('/proceed');
       } else {
         this.props.history.replace('/signup/proceed')
       }
@@ -48,7 +48,7 @@ class SessionForm extends React.Component {
   }
 
   demo_user(){
-    if ((this.props.match.path === '/login') || (this.props.match.path === '/signup')) {
+    if (this.props.match.path === '/login') {
       return <button 
       className="demo-btn btn" 
       onClick={this.loginDemoUser.bind(this)}>
@@ -107,7 +107,7 @@ class SessionForm extends React.Component {
           {((this.props.match.path === '/login') || (this.props.match.path === '/session')) ? "CONTINUE →" : "GET STARTED"}
           </button>
           {this.demo_user.bind(this)()}
-        </form>
+        </form> 
         <br />
       </div>
     )

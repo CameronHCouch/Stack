@@ -37,14 +37,12 @@ class SessionProceed extends React.Component {
 
   loginDemoUser() {
     const passwordArr = 'password'.split('');
-    debugger
     this.setState({ password: '' }, () =>
       this.demoLoginStep2(passwordArr)
     );
   }
 
   demoLoginStep2(passwordArr) {
-    debugger
     if (passwordArr.length > 0) {
       let { password } = this.state;
       this.setState(
@@ -54,7 +52,6 @@ class SessionProceed extends React.Component {
         }
       );
     } else {
-      debugger
         this.props.processForm(this.state).then(() =>
         this.props.history.replace('/'));
       } 
