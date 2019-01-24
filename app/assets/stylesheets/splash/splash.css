@@ -1,0 +1,101 @@
+.btn{
+  background-color: rgb(97, 31, 105);
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.btn:hover{
+  background-color: #4a154b;
+}
+
+.btn:focus{
+  outline-color: rgb(156, 114, 161);
+  outline-offset: 3px;
+  outline-style: dotted;
+  outline-width: 1.5px;
+}
+
+.get-started-btn{
+  margin: 30px;
+  padding: 19px 40px 20px 40px;
+}
+
+.splash{
+  font-family: 'Montserrat', "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
+  color: black;
+}
+
+.small-splash-img{
+  width: 251px;
+  position: absolute;
+  top: 230px;
+  left: 80px;
+  z-index: -1;
+}
+
+.big-splash-img{
+  width: 502px;
+  height: 502px;
+  position: relative;
+}
+
+.medium-splash-img{
+  width: 316px;
+  height: 316px;
+  position: relative;
+}
+
+p {
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 5px 90px 35px 0px;
+}
+
+.splash-main{
+  display: flex;
+}
+
+.right-splash{
+  margin-left: -15px;
+}
+
+.app-description{
+  max-width: 440px;
+  margin-bottom: -1px;
+}
+
+aside{
+  margin-top: 5px;
+  margin-bottom: 35px;
+  font-size: 14px;
+}
+
+aside > a {
+  color: #1264a3;
+  text-decoration: underline;
+}
+
+input[type=text], input[type=password]{
+  padding: 18.4px 16px;
+  border: 1px solid rgb(105,105,105);
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+
+figcaption{
+  font-size: 13px;
+  color:rgb(105,105,105)
+}
+
+figure{
+    margin-left: 195px;
+}
+
+.session-form{
+  margin-bottom: -40px;
+}

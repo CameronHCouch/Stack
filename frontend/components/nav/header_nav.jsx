@@ -12,12 +12,12 @@ class HeaderNav extends React.Component {
     return (this.props.currentUser ? (
       <div>
         <button onClick={() => this.props.logout()}>Sign Out</button>
-        <Link className="btn" to="/">Your Workspaces</Link>
+        <Link className="btn header-btn" to="/">Your Workspaces</Link>
       </div>
     ) : (
         <div>
           <Link to="/login">Sign in</Link>
-          <Link className="btn header-btn" to="/signup">GET STARTED</Link>
+          <Link className="btn header-btn" to="/session">GET STARTED</Link>
         </div>
       )
     );

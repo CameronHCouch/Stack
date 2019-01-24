@@ -21,9 +21,9 @@ class SessionForm extends React.Component {
     e.preventDefault();
       this.props.receiveEmail(this.state.email);
       if (this.props.match.path === '/login') {
-      this.props.history.replace('/session-proceed');
+      this.props.history.replace('/session/proceed');
       } else {
-        this.props.history.replace('/user-proceed')
+        this.props.history.replace('/user/proceed')
       }
   }
 
@@ -31,9 +31,16 @@ class SessionForm extends React.Component {
     this.setState({ email: e.currentTarget.value })
   }
 
+  check_if_new_page(){
+    if ((this.props.match.path === '/login') || (this.props.match.path === '/session') ) {
+      document.body.classList.add('form-backdrop')
+      return "login-form";
+    }
+  }
+
   render() {
     return (
-      <div className="session-form">
+      <div className={`{session_form ${this.check_if_new_page.bind(this)()}`}>
         <ul>
           {this.errors()}
         </ul>

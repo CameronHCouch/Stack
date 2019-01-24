@@ -1,0 +1,16 @@
+footer{
+  height: 85px;
+  width: 100%;
+  background-color: #f6f6f6;
+  margin-top: 25px;
+}
+
+.footer-list{
+  margin-right: 45px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-item{
+  margin-left: 15px;
+}

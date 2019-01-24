@@ -17,7 +17,7 @@ export default () => {
           <section className="right-splash">
             <p className="app-description">Stack is a collaboration hub for work, no matter what work you do. It’s a place where conversations happen, decisions are made, and information is always at your fingertips. With Stack, your team is better connected.</p>
             <SignupFormContainer />
-            <aside>Already using Stack? <Link to="/signin">Sign in.</Link></aside>
+            <aside>Already using Stack? <Link to="/login">Sign in.</Link></aside>
             <img className="medium-splash-img" src="https://s3.us-east-2.amazonaws.com/couchstack/Slack-Customer-Molly-Moon-BW.jpg" />
           </section>
         </div>
