@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { logout } from '../../actions/session_actions';
+import { updateUser } from '../../actions/session_actions';
 import ChatChannelSidebar from './chat_channel_sidebar';
 
 const msp = (state) => {
@@ -11,7 +11,7 @@ const msp = (state) => {
 
 const mdp = dispatch => {
   return {
-    logout: () => dispatch(logout())
+    updateUser: (user) => dispatch(updateUser(user))
   }
 }
 

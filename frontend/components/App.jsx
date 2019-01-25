@@ -11,9 +11,9 @@ import { Route, Switch } from 'react-router-dom';
 
 const App = () => (  
   <div>
-    <Route exact path="/" component={HeaderNavContainer} />
-    <Route exact path="/" component={SplashContainer} />
-    <Route exact path="/" component={Footer} />
+    <AuthRoute exact path="/" component={HeaderNavContainer} />
+    <AuthRoute exact path="/" component={SplashContainer} />
+    <AuthRoute exact path="/" component={Footer} />
 
     <AuthRoute path="/login" component={FormHeader} />
     <AuthRoute path="/signup" component={FormHeader} />

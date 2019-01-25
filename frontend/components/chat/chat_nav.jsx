@@ -9,9 +9,12 @@ class ChatNav extends React.Component {
 
   render() {
     return (
-      <header className="chat-nav-bar">
-        Hi there!
-      </header>
+      <div className="chat-nav-bar">
+        <div className="chat-nav-bar-contents">
+          <h1>Hi there!</h1>
+          Where my text do go?
+        </div>
+      </div>
     )
   }
 }

@@ -28,6 +28,14 @@
   color: black;
 }
 
+.splash-imagine{
+  font-family: 'Montserrat', "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 45px;
+}
+
 .small-splash-img{
   width: 251px;
   position: absolute;

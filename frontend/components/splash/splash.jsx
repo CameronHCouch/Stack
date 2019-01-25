@@ -5,7 +5,7 @@ import GetStartedFormContainer from '../session_form/get_started_form_container'
 export default () => {
   return (
     <div className="splash">
-      <h1>Imagine what you'll <br/>
+      <h1 className="splash-imagine">Imagine what you'll <br/>
         accomplish together
       </h1>
       <img className="small-splash-img" src="https://s3.us-east-2.amazonaws.com/couchstack/Slack-Customer-Autodesk-BW.jpg" />

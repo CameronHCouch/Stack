@@ -1,0 +1,100 @@
+.chat-channel-sidebar{
+  background-color: #3f0e40;
+  width: 200px;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  color: rgba(197,183,198,1);
+  font-weight: 400;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.chat-channel-sidebar-contents{
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-workspace-header{
+  height: 61px;
+  margin-bottom: -1px;
+}
+
+.chat-workspace-header:hover{
+  background-color: rgb(37,3,38);
+  cursor: pointer;
+}
+
+div.header-user{
+  display: flex;
+  align-items: center;
+}
+
+p.channel-side-username{
+  margin-left: 5px;
+  font-size: 
+}
+
+header h1.chat-workspace-name{
+  font-size: 18px;
+  font-weight: 900;
+  color: white;
+}
+
+span.online{
+  color: #10af79;
+  font-size: 0.5rem;
+  margin: 4px 4.5px 0 0;
+}
+
+span.self{
+  color: #10af79;
+  font-size: 0.5rem;
+}
+
+span.offline{
+  font-size: 0.5rem;
+  margin: 4.5px 4.5px 0 0;
+}
+
+.channel-side-username{
+  font-size: .875rem;
+  color: #ab9ba9;
+  margin-top: 2px;
+}
+
+h2.sidebar-list-title{
+  font-size: 16px;
+  height: 26px;
+  padding: 0 15px 0 12px;
+  margin-top: 30px;
+}
+
+div.sidebar-list ul.channel-names{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h2.sidebar-list-title:hover{
+  color: white;
+  cursor: pointer;
+}
+
+div.sidebar-list ul.channel-names li{
+  display: flex;
+  opacity: 0.64;
+  height: 26px;
+  padding: 0 0 0 12px;
+}
+
+div.sidebar-list ul.channel-names a:hover{
+  background-color: rgb(37,3,38);
+  cursor: pointer;
+  height: 26px;
+}
+
+button.chat-signout{
+  background-color: #f33d60;
+  padding: 20px;
+}

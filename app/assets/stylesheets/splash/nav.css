@@ -3,14 +3,6 @@ header {
    font-family: 'Montserrat', "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
 }
 
-h1 {
-  font-family: 'Montserrat', "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
-  font-size: 64px;
-  font-weight: 700;
-  text-align: center;
-  margin-top: 45px;
-}
-
 .nav-bar{
   display: flex;
 }
