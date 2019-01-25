@@ -17,10 +17,9 @@ class GetStartedForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
     if (Boolean(this.state.email)) {
       this.props.receiveEmail(this.state.email);
-        this.props.match.path.push('/signup');
+        this.props.history.push('/signup');
       } else {
       this.props.noEmailError();
     }

@@ -17,7 +17,12 @@ class SessionForm extends React.Component {
   
   componentDidMount() {
     this.props.clearErrors();
+    debugger
+    if (this.props.email){
+      this.setState({email: this.props.email});
+    }
   }
+
 
   handleSubmit(e) {
     e.preventDefault();
@@ -80,7 +85,7 @@ class SessionForm extends React.Component {
     return (
       <div className={`session-form-modal`}>
         <section className="login-form-header">
-          <h2 className="sign-in-text">Sign in to App Academy</h2>
+          <h2 className="sign-in-text">Sign {(this.props.match.path === "/signup") ? "up for" : "in to"} App Academy</h2>
           <p className="workspace-url">app-academy.slack.com</p>
     
           <p className="left-aligned">Enter your <strong>email address</strong> and <strong>password</strong>.</p>
@@ -99,20 +104,21 @@ class SessionForm extends React.Component {
           <label id="password">
             <input
               type='password'
+              value={this.state.password}
               onChange={this.updatePassword.bind(this)}
               htmlFor="password"
-              value={this.state.password}
               placeholder="password"
               className="password"
             />
           </label>
           <button 
-          className="signin-btn" 
+            className={(this.props.match.path === "/signup") ? "signup-btn" : "signin-btn" }
           type="submit">
-          <div>Sign In</div>
+            <div>Sign {(this.props.match.path === "/signup") ? "Up" : "In"}</div>
           </button>
           {this.demo_user.bind(this)()}
         </form> 
+        {document.body.classList.add('form-backdrop')}
         <br />
       </div>
     )

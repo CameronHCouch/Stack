@@ -129,6 +129,23 @@
   font-weight: 700;
 }
 
+.signup-btn{
+  box-sizing: content-box;
+  background-color:#0c8566;
+  width: 100%;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  margin-top: 17px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 12.5px 0px;
+  font-weight: 700;
+}
+
 input[type=password], input[type=text]{
   font-family: 'Lato', sans-serif;
   width: 100%;

@@ -65,12 +65,13 @@ p .splash-text {
 }
 
 .app-description{
+  display: block;
   max-width: 440px;
   margin-bottom: -1px;
 }
 
 aside{
-  margin-top: 5px;
+  margin-top: 16px;
   margin-bottom: 35px;
   font-size: 14px;
 }
@@ -80,13 +81,14 @@ aside > a {
   text-decoration: underline;
 }
 
-.get-started-input{
+form .get-started-input{
   padding: 18.4px 16px;
   border: 1px solid rgb(105,105,105);
   border-radius: 4px;
   margin-top: 20px;
   max-width: 251px;
   height: 60px;
+  font-size: 16px;
 }
 
 .get-started-form{
@@ -97,7 +99,8 @@ aside > a {
 
 figcaption{
   font-size: 13px;
-  color:rgb(105,105,105)
+  color:rgb(105,105,105);
+  margin-top: 6px;
 }
 
 figure{
@@ -109,4 +112,8 @@ input[type=text], input[type=password]{
   border: 1px solid rgb(105,105,105);
   border-radius: 4px;
   margin-top: 20px;
+}
+
+.get-started-wrapper{
+  height: 80px;
 }
