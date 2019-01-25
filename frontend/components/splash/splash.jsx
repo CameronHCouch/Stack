@@ -21,6 +21,7 @@ export default () => {
             <img className="medium-splash-img" src="https://s3.us-east-2.amazonaws.com/couchstack/Slack-Customer-Molly-Moon-BW.jpg" />
           </section>
         </div>
+      {document.body.classList.remove('form-backdrop')}
     </div>
   )
 }
