@@ -19,8 +19,8 @@
 }
 
 .get-started-btn{
-  margin: 30px;
-  padding: 19px 40px 20px 40px;
+  margin: 20px;
+  padding: 21px 40px 22px 40px;
 }
 
 .splash{
@@ -80,11 +80,18 @@ aside > a {
   text-decoration: underline;
 }
 
-input[type=text], input[type=password]{
+.get-started-input{
   padding: 18.4px 16px;
   border: 1px solid rgb(105,105,105);
   border-radius: 4px;
   margin-top: 20px;
+  max-width: 251px;
+  height: 60px;
+}
+
+.get-started-form{
+  display: flex;
+  align-content: center
 }
 
 
@@ -95,4 +102,11 @@ figcaption{
 
 figure{
     margin-left: 195px;
+}
+
+input[type=text], input[type=password]{
+  padding: 18.4px 16px;
+  border: 1px solid rgb(105,105,105);
+  border-radius: 4px;
+  margin-top: 20px;
 }
