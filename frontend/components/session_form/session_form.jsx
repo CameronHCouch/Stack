@@ -26,7 +26,7 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state).then(() =>
-      this.props.history.replace('/'));
+      this.props.history.replace('/messages'));
   }
 
   updatePassword(e) {
@@ -76,7 +76,7 @@ class SessionForm extends React.Component {
       );
     } else {
       this.props.processForm(this.state).then(() =>
-        this.props.history.replace('/'));
+        this.props.history.replace('/messages'));
       }
     }
 
