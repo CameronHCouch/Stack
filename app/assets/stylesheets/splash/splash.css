@@ -48,11 +48,12 @@
   position: relative;
 }
 
-p {
+p .splash-text {
   display: block;
   font-weight: 400;
   font-size: 16px;
   margin: 5px 90px 35px 0px;
+  margin-bottom: 1px;
 }
 
 .splash-main{
@@ -94,8 +95,4 @@ figcaption{
 
 figure{
     margin-left: 195px;
-}
-
-.session-form{
-  margin-bottom: -40px;
 }

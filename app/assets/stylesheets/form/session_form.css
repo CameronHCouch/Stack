@@ -1,7 +1,3 @@
-.form-backdrop{
-  background-color: #f9f9f9;
-}
-
 .form-header{
   height: 70px;
   width: 100%;
@@ -9,59 +5,74 @@
   background-color: white;
 }
 
-.form-logo-img{
-  position: fixed;
-  left: 46%;
-  top: 35px;
-  transform: translate(-50%, -50%);
+.form-backdrop{
+  background-color: #f9f9f9;
 }
 
-.password-form, .login-form{
-  width: 406px;
-  height: 590px;
+.sign-in-text{
+  text-align: center;
+}
+
+.login-form-header{
+  display: block;
+  width: 370px;
+}
+
+.login-form-header{
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0px;
+  font-family: 'Lato', sans-serif;
+}
+
+.workspace-url{
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.left-aligned{
+  text-align: left;
+}
+
+.session-text{
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+
+.login-form-header strong{
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
+.session-form-modal h2{
+  font-family: 'Lato', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.session-form-modal{
+  width: 634px;
+  height: 461px;
   position: fixed;
   left: 50%;
-  top: 400px;
+  top: 50%;
   transform: translate(-50%, -50%);
-  padding: 60px 60px 0px;
-  border: 1px solid rgb(221,221,221);
+  padding: 32px 32px 32px 16px;
+  border: 1px solid #1c7856;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   border-radius: 10px;
   box-shadow: 0 10px 25px #ddd;
   background-color: white;
 }
 
-.proceed-form, .login-form > form{
+.session-form{
   display: flex;
   flex-direction: column;
-}
-
-.login-form > form{
-  margin-top: -259px;
-}
-
-.confirm-btn, .login-form form button{
-  background-color:#0c8566;
-  max-width: 369.250px;
-  height: 49px;
-  color: white;
-  font-family: 'Montserrat', "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
-  text-align: center;
-  margin-top: 17px;
-  border-radius: 4px;
-}
-
-.password, .login-form form input[type=text]{
-  max-width: 369.250px;
-  font-family: 'Montserrat', "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
-  border-radius: 4px;
-}
-
-.find-team{
-  width: 300px;
+  width: 369.250px;
 }
 
 .error{
@@ -71,29 +82,56 @@
   font-weight: 600;
 }
 
-.login-form form .demo-btn{
+.demo-btn{
+  display: block;
+  box-sizing: content-box;
   background-color: #611f69;
-  max-width: 369.250px;
+  max-width: 375.062px;
+  width: 100%;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  padding: 15px 0px 35px 0px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
-.login-form form .get-started-btn{
-  max-width: 369.250px;
-  
-}
-
-.login-form form .demo-btn:hover{
+.demo-btn:hover{
   background-color: #4a154b;
 }
 
-.login-form form .demo-btn:focus{
+.demo-btn:focus{
   outline-color: rgb(156, 114, 161);
   outline-offset: 3px;
   outline-style: dotted;
   outline-width: 1.5px;
 }
 
-.login-form form button{
+.signin-btn{
+  box-sizing: content-box;
+  background-color:#0c8566;
   width: 100%;
-  display: block;
-  margin: 5px 0;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  margin-top: 17px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 15px 0px 35px 0px;
+  font-weight: 700;
+}
+
+input[type=password], input[type=text]{
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 20px;
 }

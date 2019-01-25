@@ -14,45 +14,31 @@ class SessionForm extends React.Component {
       )
     }
   }
+  
+  componentDidMount() {
+    this.props.clearErrors();
+  }
 
   handleSubmit(e) {
     e.preventDefault();
-
-    if (Boolean(this.state.email)) { 
-      this.props.receiveEmail(this.state.email);
-      if (this.props.match.path === '/login') {
-        this.props.match.path.push('/proceed');
-      } else {
-        this.props.history.replace('/signup/proceed')
-      }
-    } else{
-      this.props.noEmailError();
-    }
+    this.props.processForm(this.state).then(() =>
+      this.props.history.replace('/'));
   }
 
-  componentDidMount(){
-    this.props.clearErrors();
+  updatePassword(e) {
+    this.setState({ password: e.currentTarget.value })
   }
 
   updateEmail(e) {
     this.setState({ email: e.currentTarget.value })
   }
 
-  check_if_new_page(){
-    if ((this.props.match.path === '/login') || (this.props.match.path === '/signup') ) {
-      document.body.classList.add('form-backdrop')
-      return "login-form";
-    } else {
-      return ""
-    }
-  }
-
   demo_user(){
     if (this.props.match.path === '/login') {
       return <button 
-      className="demo-btn btn" 
+      className="demo-btn" 
       onClick={this.loginDemoUser.bind(this)}>
-        Demo User
+        <div>Demo User</div>
       </button>
     }
   }
@@ -60,51 +46,70 @@ class SessionForm extends React.Component {
   loginDemoUser(e){
     e.preventDefault();
     const emailArr = 'guest@user.com'.split('');
+    const passwordArr = 'password'.split("");
     this.setState({ email: '', password: '' }, () =>
-      this.demoLoginStep1(emailArr)
+      this.demoLogin(emailArr, passwordArr)
     );
   }
 
-  demoLoginStep1(emailArr){
+  demoLogin(emailArr, passwordArr){
+    let { email } = this.state;
+    let { password } = this.state;
+
     if (emailArr.length > 0) {
-      let { email } = this.state;
       this.setState(
         { email: email + emailArr.shift() }, () => {
           setTimeout(() =>
-            this.demoLoginStep1(emailArr), 60);
+            this.demoLogin(emailArr, passwordArr), 60);
+        }
+      );
+    } else if (passwordArr.length > 0) {
+      this.setState(
+        { password: password + passwordArr.shift() }, () => {
+          setTimeout(() =>
+            this.demoLogin(emailArr, passwordArr), 60);
         }
       );
     } else {
-      if (Boolean(this.state.email)) {
-        this.props.receiveEmail(this.state.email);
-        if (this.props.match.path === '/login') {
-          this.props.history.replace('/login/proceed');
-        } else {
-          this.props.history.replace('/signup/proceed')
-        }
-      } else {
-        this.props.noEmailError();
+      this.props.processForm(this.state).then(() =>
+        this.props.history.replace('/'));
       }
     }
-  }
 
   render() {
     return (
-      <div className={`session_form ${this.check_if_new_page.bind(this)()}`}>
+      <div className={`session-form-modal`}>
+        <section className="login-form-header">
+          <h2 className="sign-in-text">Sign in to App Academy</h2>
+          <p className="workspace-url">app-academy.slack.com</p>
+    
+          <p className="left-aligned">Enter your <strong>email address</strong> and <strong>password</strong>.</p>
+        </section>
         <ul>
           {this.errors()}
         </ul>
-        <form onSubmit={this.handleSubmit.bind(this)}>
+        <form className="session-form" onSubmit={this.handleSubmit.bind(this)}>
           <label id="email">
           <input type='text' 
             value={this.state.email}
             onChange={this.updateEmail.bind(this)} 
-            htmlFor="email" placeholder="Email address" />
+            htmlFor="email" 
+            placeholder="you@example.com" />
+          </label>
+          <label id="password">
+            <input
+              type='password'
+              onChange={this.updatePassword.bind(this)}
+              htmlFor="password"
+              value={this.state.password}
+              placeholder="password"
+              className="password"
+            />
           </label>
           <button 
-          className="get-started-btn btn" 
+          className="signin-btn" 
           type="submit">
-          {((this.props.match.path === '/login') || (this.props.match.path === '/session')) ? "CONTINUE →" : "GET STARTED"}
+          <div>Sign In</div>
           </button>
           {this.demo_user.bind(this)()}
         </form> 
