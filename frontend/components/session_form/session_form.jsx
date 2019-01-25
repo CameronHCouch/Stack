@@ -17,7 +17,6 @@ class SessionForm extends React.Component {
   
   componentDidMount() {
     this.props.clearErrors();
-    debugger
     if (this.props.email){
       this.setState({email: this.props.email});
     }
