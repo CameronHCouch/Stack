@@ -1,6 +1,7 @@
 class Api::WorkspacesController < ApplicationController
   def index
     @workspaces = current_user.workspaces
+    render "api/workspaces/index"
   end
 
   def show
@@ -12,10 +13,10 @@ class Api::WorkspacesController < ApplicationController
     @workspace.admin_id = current_user.id
 
     if @workspace.save
-      Subscription.create!(member_id: current_user.id, subscribable: @workspace)
+      Subscription.create!(user_id: current_user.id, subscribable: @workspace)
 
       general_chat = Channel.create!(name: '#general', description: 'Company-wide announcements and work-based matters', workspace_id: @workspace.id)
-      Subscription.create!(member_id: current_user.id, subscribable: general_chat)
+      Subscription.create!(user_id: current_user.id, subscribable: general_chat)
       
       render "api/workspaces/show"
     else

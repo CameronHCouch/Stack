@@ -29,10 +29,10 @@ map_dm3 = Channel.create!(name: "Map3 DM", description: "Do Slack DMs have descr
 map_dm4 = Channel.create!(name: "Map4 DM", description: "Do Slack DMs have descriptions?", is_dm: true, workspace_id: map_acad.id)
 map_dm5 = Channel.create!(name: "Map5 DM", description: "Do Slack DMs have descriptions?", is_dm: true, workspace_id: map_acad.id)
 
-aa_admin_sub = Subscription.create!(member_id: admin.id, subscribable: app_acad)
-ma_admin_sub = Subscription.create!(member_id: quest.id, subscribable: app_acad)
-guest_aa_sub = Subscription.create!(member_id: guest.id, subscribable: app_acad)
-guest_ma_sub = Subscription.create!(member_id: guest.id, subscribable: map_acad)
-best_aa_sub = Subscription.create!(member_id: best.id, subscribable: app_acad)
-best_ma_sub = Subscription.create!(member_id: best.id, subscribable: map_acad)
+aa_admin_sub = Subscription.create!(user_id: admin.id, subscribable: app_acad)
+ma_admin_sub = Subscription.create!(user_id: quest.id, subscribable: app_acad)
+guest_aa_sub = Subscription.create!(user_id: guest.id, subscribable: app_acad)
+guest_ma_sub = Subscription.create!(user_id: guest.id, subscribable: map_acad)
+best_aa_sub = Subscription.create!(user_id: best.id, subscribable: app_acad)
+best_ma_sub = Subscription.create!(user_id: best.id, subscribable: map_acad)
 

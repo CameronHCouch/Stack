@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_26_172504) do
+ActiveRecord::Schema.define(version: 2019_01_26_222114) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,14 +37,14 @@ ActiveRecord::Schema.define(version: 2019_01_26_172504) do
   end
 
   create_table "subscriptions", force: :cascade do |t|
-    t.integer "member_id", null: false
     t.integer "subscribable_id", null: false
     t.string "subscribable_type", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["member_id"], name: "index_subscriptions_on_member_id"
+    t.integer "user_id"
     t.index ["subscribable_id", "subscribable_type"], name: "index_subscriptions_on_subscribable_id_and_subscribable_type"
     t.index ["subscribable_id"], name: "index_subscriptions_on_subscribable_id"
+    t.index ["user_id"], name: "index_subscriptions_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

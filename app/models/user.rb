@@ -21,6 +21,8 @@ class User < ApplicationRecord
 
   has_many :messages
   has_many :subscriptions, dependent: :destroy
+  has_many :channels, through: :subscriptions, source: :subscribable, source_type: 'Channel'
+  has_many :workspaces, through: :subscriptions, source: :subscribable, source_type: 'Workspace'
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
