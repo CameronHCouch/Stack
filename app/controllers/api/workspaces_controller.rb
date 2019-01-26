@@ -1,7 +1,6 @@
 class Api::WorkspacesController < ApplicationController
   def index
     @workspaces = current_user.workspaces
-    render "api/workspaces/index"
   end
 
   def show
