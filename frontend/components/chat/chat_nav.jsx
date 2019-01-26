@@ -11,8 +11,8 @@ class ChatNav extends React.Component {
     return (
       <div className="chat-nav-bar">
         <div className="chat-nav-bar-contents">
-          <h1>Hi there!</h1>
-          Where my text do go?
+          <h1 className="channel-name-head">#IT_IS_HERE</h1>
+          
         </div>
       </div>
     )

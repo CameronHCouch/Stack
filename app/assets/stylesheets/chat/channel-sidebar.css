@@ -1,18 +1,18 @@
 .chat-channel-sidebar{
+  display: flex;
   background-color: #3f0e40;
-  width: 200px;
+  width: 220px;
   height: 100%;
   font-family: 'Lato', sans-serif;
   color: rgba(197,183,198,1);
   font-weight: 400;
-  position: absolute;
-  left: 0;
-  top: 0;
 }
 
 .chat-channel-sidebar-contents{
   display: flex;
   flex-direction: column;
+  width: 100%;
+  /* overflow-y: scroll; */
 }
 
 .chat-workspace-header{
@@ -32,7 +32,6 @@ div.header-user{
 
 p.channel-side-username{
   margin-left: 5px;
-  font-size: 
 }
 
 header h1.chat-workspace-name{

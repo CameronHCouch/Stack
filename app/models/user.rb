@@ -16,8 +16,11 @@ class User < ApplicationRecord
   validates :password_digest, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
-  after_initialize :ensure_session_token
+  after_initialize :ensure_session_token, :default_vals
   attr_reader :password
+
+  has_many :messages
+  has_many :subscriptions, dependent: :destroy
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
@@ -44,5 +47,11 @@ class User < ApplicationRecord
 
   def ensure_session_token
     self.session_token ||= SecureRandom::urlsafe_base64
+  end
+
+  private
+
+  def default_vals
+    self.username = self.username || self.email
   end
 end

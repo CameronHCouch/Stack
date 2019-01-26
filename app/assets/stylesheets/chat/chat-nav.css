@@ -1,0 +1,19 @@
+h1.channel-name-head{
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+}
+
+.chat-nav-bar{
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid rgb(229,229,229);
+
+}
+
+.chatroom-header{
+  display: flex;
+  height: 60px;
+  width: 100%;
+  background-color: white;
+}
