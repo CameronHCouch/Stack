@@ -12,7 +12,7 @@
 #
 
 class Channel < ApplicationRecord
-  validates :name, :is_dm, presence: true
+  validates :name, presence: true
 
   belongs_to :workspace,
     foreign_key: :workspace_id,
