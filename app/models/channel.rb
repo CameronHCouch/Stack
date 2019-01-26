@@ -26,6 +26,5 @@ class Channel < ApplicationRecord
     foreign_key: :subscribable_id,
     class_name: 'Subscription'
 
-  has_many :members,
-    through: :subscriptions
+  has_many :members, through: :subscriptions, source: :member, dependent: :destroy
 end

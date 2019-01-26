@@ -13,7 +13,7 @@
 class Subscription < ApplicationRecord
   validates :member_id, :subscribable_id, :subscribable_type, presence: true
 
-  belongs_to :user,
+  belongs_to :member,
     foreign_key: :member_id,
     class_name: 'User'
     

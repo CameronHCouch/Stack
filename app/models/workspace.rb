@@ -24,5 +24,5 @@ class Workspace < ApplicationRecord
     foreign_key: :subscribable_id,
     class_name: 'Subscription'
 
-  has_many :members, as: :subscribable, dependent: :destroy
+  has_many :members, through: :subscriptions, source: :member, dependent: :destroy
 end
