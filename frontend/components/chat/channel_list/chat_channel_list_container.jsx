@@ -5,7 +5,8 @@ import { requestChannels } from '../../../actions/channel_actions';
 
 const msp = state => {
   return {
-    channels: state.entities.channels,
+    channels: Object.values(state.entities.channels),
+    workspace: Object.values(state.entities.workspaces),
   };
 };
 

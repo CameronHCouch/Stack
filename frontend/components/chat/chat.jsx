@@ -10,6 +10,10 @@ class Chat extends React.Component {
     this.state = { email: "", password: "" };
   };
 
+  componentDidMount(){
+    this.props.requestWorkspace(1);
+  }
+
   render() {
     return (
       <div className="chatroom-wrapper">

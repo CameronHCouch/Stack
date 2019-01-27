@@ -11,8 +11,7 @@ class ChatChannelList extends React.Component {
   }
 
   render(){
-    let channels = Object.values(this.props.channels);
-    
+    let channels = this.props.channels;
     channels = channels.map((channel, idx) => {
       return(<ChatChannelListItem
         channelType={this.props.channelType} 

@@ -6,6 +6,7 @@ import ChatChannelSidebar from './chat_channel_sidebar';
 const msp = (state) => {
   return {
     currentUser: state.entities.users[state.session.currentUser],
+    workspace: state.entities.workspaces[0],
   }
 }
 

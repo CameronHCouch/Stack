@@ -6,6 +6,7 @@ import ChatNav from './chat_nav'
 const msp = (state) => {
   return {
     currentUser: state.session.currentUser,
+    selectedChannel: state.entities.channels[state.ui.selectedId]
   }
 }
 

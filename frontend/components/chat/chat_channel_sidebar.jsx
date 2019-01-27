@@ -8,6 +8,7 @@ class ChatChannelSidebar extends React.Component {
   };
 
   render() {
+
     return (
       <div className="chat-channel-sidebar">
         <div className="chat-channel-sidebar-contents">

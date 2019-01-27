@@ -33,7 +33,7 @@ export const requestWorkspaces = () => dispatch => {
 }
 
 export const requestWorkspace = (id) => dispatch => {
-  return WorkspaceAPIUtil.requestWorkspaces(id).then(
+  return WorkspaceAPIUtil.requestWorkspace(id).then(
     (workspace) => dispatch(receiveWorkspace(workspace)),
     (errors) => dispatch(receiveErrors(errors.responseJSON)))
 }
