@@ -8,12 +8,11 @@ h1.channel-name-head{
   height: 60px;
   width: 100%;
   border-bottom: 1px solid rgb(229,229,229);
-
+  background-color: white;
 }
 
 .chatroom-header{
   display: flex;
   height: 60px;
   width: 100%;
-  background-color: white;
 }

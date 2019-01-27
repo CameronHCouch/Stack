@@ -1,4 +1,4 @@
-import { RECEIVE_SESSION_ERRORS, RECEIVE_CURRENT_USER, CLEAR_ERRORS, NO_EMAIL_ERROR } from '../actions/session_actions';
+import { RECEIVE_SESSION_ERRORS, RECEIVE_CURRENT_USER, CLEAR_ERRORS, NO_EMAIL_ERROR } from '../../actions/session_actions';
 import { union } from 'lodash';
 
 export default (state = [], action) => {

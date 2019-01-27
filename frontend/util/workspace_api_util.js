@@ -1,11 +1,11 @@
-export const receiveWorkspaces = () => {
+export const requestWorkspaces = () => {
   return $.ajax({
     method: 'GET',
     url: `/api/workspaces`
   })
 }
 
-export const receiveWorkspace = id => {
+export const requestWorkspace = id => {
   return $.ajax({
     method: 'GET',
     url: `/api/workspaces/${id}`
