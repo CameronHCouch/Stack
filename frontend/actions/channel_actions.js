@@ -3,6 +3,7 @@ import * as ChannelAPIUtil from '../util/channel_api_util';
 export const RECEIVE_USERS_CHANNELS = "RECEIVE_USERS_CHANNELS";
 export const RECEIVE_CHANNEL = "RECEIVE_CHANNEL";
 export const CREATE_CHANNEL = "CREATE_CHANNEL"
+export const RECEIVE_CHANNEL_ERRORS = "RECEIVE_CHANNEL_ERRORS";
 
 const receiveUsersChannels = (channels) => {
   return {

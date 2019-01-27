@@ -2,7 +2,8 @@ import * as WorkspaceAPIUtil from '../util/workspace_api_util';
 
 export const RECEIVE_USERS_WORKSPACES = "RECEIVE_USERS_WORKSPACES";
 export const RECEIVE_WORKSPACE = "RECEIVE_WORKSPACE";
-export const CREATE_WORKSPACE = "CREATE_WORKSPACE"
+export const CREATE_WORKSPACE = "CREATE_WORKSPACE";
+export const RECEIVE_WORKSPACE_ERRORS = "RECEIVE_WORKSPACE_ERRORS";
 
 const receiveUsersWorkspaces = (workspaces) => {
   return {

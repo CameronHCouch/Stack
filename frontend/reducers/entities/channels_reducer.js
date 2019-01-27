@@ -3,7 +3,6 @@ import { merge } from 'lodash';
 
 
 export default (state = {}, action) => {
-debugger
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_USERS_CHANNELS:

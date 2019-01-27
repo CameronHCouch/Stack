@@ -1,4 +1,4 @@
-import { RECEIVE_CHANNEL_ERRORS, RECEIVE_CHANNEL } from '../../actions/session_actions';
+import { RECEIVE_CHANNEL_ERRORS, RECEIVE_CHANNEL } from '../../actions/channel_actions';
 
 export default (state = [], action) => {
   Object.freeze(state);

@@ -19,10 +19,10 @@ best = User.create!(email: "best@user.com", password: "password", username: "Bes
 app_acad = Workspace.create!(name: "App Academy", admin_id: admin.id)
 map_acad = Workspace.create!(name: "Map Academy", admin_id: quest.id)
 
-welcome = Channel.create!(name: "Welcome to App Academy's Stack!", description: "Company-wide announcements and work-based matters", workspace_id: app_acad.id)
-belcome = Channel.create!(name: "Belcome to Stack!", description: "You have entered: The Belcome Chat", workspace_id: app_acad.id)
+welcome = Channel.create!(name: "#welcome!", description: "Company-wide announcements and work-based matters", workspace_id: app_acad.id)
+belcome = Channel.create!(name: "#belcome!", description: "You have entered: The Belcome Chat", workspace_id: app_acad.id)
 secret_dm = Channel.create!(name: "First DM", description: "Do Slack DMs have descriptions?", is_dm: true, workspace_id: app_acad.id)
-geographers = Channel.create!(name: "Welcome to Map Academy's Stack!", description: "Learn about maps", workspace_id: map_acad.id)
+geographers = Channel.create!(name: "#welcome!", description: "Learn about maps", workspace_id: map_acad.id)
 map_dm = Channel.create!(name: "Map1 DM", description: "Do Slack DMs have descriptions? 1", is_dm: true, workspace_id: map_acad.id)
 map_dm2 = Channel.create!(name: "Map2 DM", description: "Do Slack DMs have descriptions? 2", is_dm: true, workspace_id: map_acad.id)
 map_dm3 = Channel.create!(name: "Map3 DM", description: "Do Slack DMs have descriptions? 3", is_dm: true, workspace_id: map_acad.id)
