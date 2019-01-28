@@ -1,7 +1,7 @@
 import React from 'react';
-import ChatChannelListItem from './chat_channel_list_item';
+import ChannelListItemContainer from './channel_list_item_container';
 
-class ChatChannelList extends React.Component {
+class ChannelList extends React.Component {
   constructor(props){
     super(props)
   }
@@ -13,7 +13,7 @@ class ChatChannelList extends React.Component {
   render(){
     let channels = this.props.channels;
     channels = channels.map((channel, idx) => {
-      return(<ChatChannelListItem
+      return(<ChannelListItemContainer
         channelType={this.props.channelType} 
         channel={channel}
         key={idx}
@@ -29,4 +29,4 @@ class ChatChannelList extends React.Component {
   }
 }
 
-export default ChatChannelList;
+export default ChannelList;

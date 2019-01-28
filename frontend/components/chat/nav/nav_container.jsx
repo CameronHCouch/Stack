@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
+import { logout } from '../../../actions/session_actions';
 import { withRouter } from 'react-router-dom';
-import ChatNav from './chat_nav'
+import Nav from './nav'
 
 const msp = (state) => {
   return {
     currentUser: state.session.currentUser,
-    selectedChannel: state.entities.channels[state.ui.selectedId]
+    selectedChannel: state.entities.channels[state.ui.selectedId] || state.entities.channels[1]
   }
 }
 
@@ -16,4 +16,4 @@ const mdp = dispatch => {
   }
 }
 
-export default withRouter(connect(msp, mdp)(ChatNav))
+export default withRouter(connect(msp, mdp)(Nav))

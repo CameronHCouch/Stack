@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
-import ChatChannelListItem from './chat_channel_list_item';
-import { selectChannel } from '../../actions/ui_actions';
+import ChannelListItem from './channel_list_item';
+import { selectChannel } from '../../../actions/ui_actions';
 
 const msp = state => {
   return {
@@ -16,4 +16,4 @@ const mdp = dispatch => {
   };
 };
 
-export default connect(msp, mdp)(ChatChannelListItem);
+export default connect(msp, mdp)(ChannelListItem);

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import ChatChannelList from './chat_channel_list';
+import ChannelList from './channel_list';
 import { requestChannels } from '../../../actions/channel_actions';
 
 const msp = state => {
@@ -15,4 +15,4 @@ const mdp = dispatch => {
     requestChannels: () => dispatch(requestChannels())}
 };
 
-export default withRouter(connect(msp,mdp)(ChatChannelList));
+export default withRouter(connect(msp,mdp)(ChannelList));

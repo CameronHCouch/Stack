@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ChatChannelListItem extends React.Component{
+class ChannelListItem extends React.Component{
   constructor(props){
     super(props);
   }
@@ -31,7 +31,7 @@ class ChatChannelListItem extends React.Component{
   }
 }
 
-export default ChatChannelListItem
+export default ChannelListItem
 
 
 // <a href="#"><li><span className="offline"><i className="far fa-circle"></i></span>Private Convo 7</li></a>

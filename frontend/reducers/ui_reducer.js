@@ -1,6 +1,7 @@
 import { RECEIVE_EMAIL } from '../actions/ui_actions';
 import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
 import { SELECT_CHANNEL } from '../actions/ui_actions';
+import { merge } from 'lodash';
 
 const defaultState = { email: null };
 
