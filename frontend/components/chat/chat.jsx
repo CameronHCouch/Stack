@@ -5,21 +5,17 @@ import ChannelSidebarContainer from './sidebar/channel_sidebar_container';
 import { Link, NavLink } from 'react-router-dom';
 
 class Chat extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { email: "", password: "" };
-  };
 
   componentDidMount(){
     this.props.requestWorkspace(1);
   }
 
   render() {
+    debugger
     return (
       <div className="chatroom-wrapper">
         <ChannelSidebarContainer />
         <NavContainer />
-        {/* <NoUsernameModalContainer /> */}
       </div>
     )
   }

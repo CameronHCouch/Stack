@@ -13,7 +13,8 @@ export default (state = defaultState, action) => {
     case RECEIVE_CURRENT_USER:
       return defaultState;
     case SELECT_CHANNEL:
-      let newState = merge({}, state, { selectedId: action.channelId });
+      let newState = merge({}, state);
+      newState.selectedId = action.channelId;
       return newState;
     default:
       return state;

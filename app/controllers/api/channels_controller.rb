@@ -10,6 +10,8 @@ class Api::ChannelsController < ApplicationController
 
   def create
     @channel = Channel.new(channel_params)
+    # hardcoding workspace until workspaces are fully implemented
+    @channel.workspace = current_user.workspaces.first
 
     if @channel.save
       Subscription.create!(user_id: current_user.id, subscribable: @channel)

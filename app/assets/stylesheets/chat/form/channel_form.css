@@ -1,0 +1,146 @@
+div.channel-form-modal{
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 640px;
+  height: 526px;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  margin-top: 
+}
+
+h1.channel-form-header{
+  color: #1d1c1d;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.channel-form-description{
+  font-size: .9rem;
+  line-height: 1.25rem;
+  color: #616061;
+  margin: 16px 0px;
+}
+
+.channel-form-header{
+  width: 100%;
+}
+
+label strong{
+  font-weight: 700;
+}
+
+.channel-form-input-description{
+  color: #616061;
+  font-size: .8rem;
+  margin-top: .25rem;
+  margin-bottom: 24px;
+}
+
+div.channel-form-modal button{
+  border-radius: 1rem;
+  width: 94px;
+  font-size: .9rem;
+  font-weight: 700;
+  text-align: center;
+  transition: 70ms ease-out;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  height: 27px;
+  line-height: 23px;
+  float: left;
+  margin-bottom: 16px;
+}
+
+form.channel-form input[type="text"]{
+  margin: 0;
+  padding: 11px 12px;
+}
+
+
+div.channel-form-modal button{
+  display: flex;
+  transition: 70ms ease-out;
+  align-content: flex-start;
+  justify-content: center;
+}
+
+div.channel-form-modal button.Public{
+  background-color: #007a5a;
+  color: white;
+}
+
+button.Private{
+  background-color: rgb(232, 145, 45);
+  color: white;
+  flex-direction: row-reverse;
+}
+
+span.dm-toggle-description{
+  display: inline-block;
+  color: #1d1c1d;
+  margin: 4px 0px 0px 8px;
+}
+
+/* span.white-toggle-circle{
+    display: inline-block;
+    padding: 0;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: white;
+    border-radius:50px;
+    position: relative;
+    top: -3px;
+    height: 24px;
+    width: 24px;
+} */
+
+section.channel-form-buttons{
+  display: flex; 
+  box-sizing: border-box;
+  justify-content: flex-end;
+}
+
+div.channel-form-modal section.channel-form-buttons button.cancel{
+  margin-right: 8px;
+  padding: 0 18px 0 18px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 0px;
+  height: 50px;
+  box-shadow: inset 0 0 0 1px rgba(29,28,29,.3);
+}
+
+div.channel-form-modal section.channel-form-buttons input[type=submit].create-channel.valid{
+  background-color: rgb(18,124,90);
+  color: white;
+}
+
+div.channel-form-modal section.channel-form-buttons input[type=submit].create-channel{
+  background-color: #ddd;
+  padding: 0 18px 0 18px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 4px;
+  text-align: center;
+  height: 50px;
+  color: rgba(29, 28, 29, 0.75);
+  width: 180px;
+}
+
+
+label#description{
+  display: block;
+  margin-bottom: 10px;
+}
+
+label#name{
+  display:block;
+  margin-bottom: 10px;
+}

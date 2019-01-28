@@ -11,7 +11,7 @@
 .chat-channel-sidebar-contents{
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 220px;
   /* overflow-y: scroll; */
 }
 
@@ -84,7 +84,7 @@ div.sidebar-list ul.channel-names li{
   display: flex;
   opacity: 0.64;
   height: 26px;
-  padding: 0 0 0 12px;
+  padding: 2px 0 0 12px;
 }
 
 div.sidebar-list ul.channel-names a:hover{
@@ -96,4 +96,22 @@ div.sidebar-list ul.channel-names a:hover{
 button.chat-signout{
   background-color: #f33d60;
   padding: 20px;
+}
+
+.sidebar-add-channel{
+  font-size: 16px;
+  height: 26px;
+  padding: 2px 15px 0 12px;
+  margin-top: 30px;
+}
+
+.sidebar-add-channel:hover{
+  background-color: rgb(37,3,38);
+  cursor: pointer;
+  padding-top: 2px;
+}
+
+.selected-channel{
+  background-color: #0662a3;
+  color: white;
 }

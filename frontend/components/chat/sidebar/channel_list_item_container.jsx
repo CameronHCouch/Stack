@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-
 import ChannelListItem from './channel_list_item';
 import { selectChannel } from '../../../actions/ui_actions';
 

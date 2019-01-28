@@ -7,6 +7,14 @@ class ChannelSidebar extends React.Component {
     super(props);
   };
 
+  componentDidMount() {
+    this.props.requestChannels();
+  }
+  
+  revealAddChannelForm(){
+    return ""
+  }
+
   render() {
     return (
       <div className="chat-channel-sidebar">
@@ -20,12 +28,16 @@ class ChannelSidebar extends React.Component {
 
           <div className="sidebar-list">
             <h2 className="sidebar-list-title">Channels</h2>
-              <ChannelList channelType="public"/>
+              <ChannelList channelType={false} />
+          </div>
+
+          <div>
+            <h2 className="sidebar-add-channel"><a href="#" onClick={this.revealAddChannelForm.bind(this)}>+ Add a channel</a></h2>
           </div>
             
           <div className="sidebar-list">
             <h2 className="sidebar-list-title">Direct Messages</h2>
-              <ChannelList channelType="private"/>
+              <ChannelList channelType={true} />
           </div>
           <button className="chat-signout" onClick={() => this.props.logout()}>Sign Out</button>
         </div>

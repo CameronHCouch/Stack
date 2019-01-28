@@ -6,26 +6,26 @@ class ChannelList extends React.Component {
     super(props)
   }
 
-  componentDidMount() {
-    this.props.requestChannels();
-  }
+  
 
   render(){
     let channels = this.props.channels;
-    channels = channels.map((channel, idx) => {
-      return(<ChannelListItemContainer
-        channelType={this.props.channelType} 
-        channel={channel}
-        key={idx}
-        />
-    )
-  });
+    let channelLis = [];
+    channels.forEach((channel, idx) => {
+      if (channel.is_dm == (this.props.channelType)) {
+        channelLis.push(<ChannelListItemContainer
+          channelType={this.props.channelType} 
+          channel={channel}
+          key={channel.id}
+          />);
+      }
+    });
 
-  return(
-      <ul className="channel-names">
-        {channels}
-      </ul>
-    )
+    return(
+        <ul className="channel-names">
+          {channelLis}
+        </ul>
+    );
   }
 }
 
