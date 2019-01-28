@@ -19,7 +19,7 @@ class Api::WorkspacesController < ApplicationController
       
       render "api/workspaces/show"
     else
-      render json: @server.errors.full_messages, status: 422
+      render json: @workspace.errors.full_messages, status: 422
     end
   end
 
