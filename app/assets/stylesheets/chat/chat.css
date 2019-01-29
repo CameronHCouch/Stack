@@ -2,7 +2,7 @@ div.chatroom-wrapper{
   display: flex;
   flex-direction: row;
   height: 100vh;
-
+  overflow-y: scroll;
 }
 
 .nav-and-chat-wrapper{
@@ -11,9 +11,4 @@ div.chatroom-wrapper{
   width: 100%;
   justify-content: space-between;
 
-}
-
-.chatroom-container{
-  overflow-y: scroll;
-  /* height: 100vh; */
 }

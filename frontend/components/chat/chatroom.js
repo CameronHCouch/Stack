@@ -46,8 +46,13 @@ class ChatRoom extends React.Component {
         <li 
         className="message-wrapper"
         key={idx}>
-          <span className="message-user-info"><strong>{this.props.users[message.author_id].username}</strong>  <span className="message-time">{message.created_at.slice(11, 19)}</span></span>
-          <span className="message-body">{message.body}</span>
+        <div className="the-whole-message">
+          <img src={`https://s3.us-east-2.amazonaws.com/couchstack/avatar${Math.ceil(Math.random() * Math.ceil(5))}.png`} />
+          <div className="message">
+            <span className="message-user-info"><strong>{this.props.users[message.author_id].username}</strong>  <span className="message-time">{message.created_at.slice(11, 19)}</span></span>
+            <span className="message-body">{message.body}</span>
+          </div>
+        </div>
           <div ref={this.bottom} />
         </li>
       );
