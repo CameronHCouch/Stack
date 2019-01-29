@@ -5,11 +5,11 @@ import CreateChannelForm from './create_channel_form_container';
 import EditChannelForm from './edit_channel_form_container';
 import UpdateUsernameForm from './update_username_form_container';
 
-import { closeModal } from '../../../actions/modal_actions';
 import {
   CREATE_CHANNEL_MODAL,
   EDIT_CHANNEL_MODAL,
-  UPDATE_USERNAME_MODAL
+  UPDATE_USERNAME_MODAL,
+  closeModal
 } from '../../../actions/modal_actions';
 
 const msp = state => (
@@ -25,22 +25,22 @@ const Modal = (props) => {
   switch (props.modal) {
     case CREATE_CHANNEL_MODAL:
       return (
-        <div className={`channel-form-modal`}>
-          <button onClick={props.clearModal}>&#10005;</button>
+        <div className={`modal channel-form-modal`}>
+          <button onClick={props.closeModal}>&#10005;</button>
           <CreateChannelForm />
         </div>
       );
     case EDIT_CHANNEL_MODAL:
       return (
-        <div className={`channel-form-modal`}>
-          <button onClick={props.clearModal}>&#10005;</button>
+        <div className={`modal channel-form-modal`}>
+          <button onClick={props.closeModal}>&#10005;</button>
           <EditChannelForm />
         </div>
       );
     case UPDATE_USERNAME_MODAL:
       return (
         <div className='modal'>
-          <button onClick={props.clearModal}>&#10005;</button>
+          <button onClick={props.closeModal}>&#10005;</button>
           <UpdateUsernameForm />
         </div>
       );

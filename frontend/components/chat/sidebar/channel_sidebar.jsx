@@ -28,7 +28,7 @@ class ChannelSidebar extends React.Component {
           </div>
 
           <div>
-            <h2 className="sidebar-add-channel"><a href="#" onClick={this.props.createChannelForm}>+ Add a channel</a></h2>
+            <h2 className="sidebar-add-channel" onClick={this.props.createChannelForm}>+ Add a channel</h2>
           </div>
             
           <div className="sidebar-list">

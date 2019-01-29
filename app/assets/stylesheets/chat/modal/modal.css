@@ -1,0 +1,12 @@
+.modal{
+  position: absolute;
+  z-index: 2;
+  min-height: 100%;
+  min-width: 100%;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  margin: 0 auto;
+}

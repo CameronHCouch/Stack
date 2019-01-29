@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { logout } from '../../../actions/session_actions';
 import ChannelSidebar from './channel_sidebar';
 import { requestChannels } from '../../../actions/channel_actions';
-import { createChannelForm } from '../modals/modal';
+import { createChannelModal } from '../../../actions/modal_actions';
 
 const msp = (state) => {
   return {
@@ -15,7 +15,7 @@ const mdp = dispatch => {
   return {
     logout: () => dispatch(logout()),
     requestChannels: () => dispatch(requestChannels()),
-    createChannelForm: () => dispatch(createChannelForm())
+    createChannelModal: () => dispatch(createChannelModal())
   };
 };
 
