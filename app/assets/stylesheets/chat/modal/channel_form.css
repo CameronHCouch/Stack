@@ -100,8 +100,9 @@ span.dm-toggle-description{
 
 section.channel-form-buttons{
   display: flex; 
+  flex-direction: row-reverse;
   box-sizing: border-box;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 div.channel-form-modal section.channel-form-buttons button.cancel{

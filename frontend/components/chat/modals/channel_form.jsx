@@ -90,13 +90,13 @@ class ChannelForm extends React.Component {
             />
           <p className="channel-form-input-description">What's this channel about?</p>
           <section className="channel-form-buttons">
-            <button className="cancel" onClick={this.props.closeModal}>Cancel</button>
-            <input 
-              type="submit" 
+            <input
+              type="submit"
               value={this.props.formType === "create" ? "Create Channel" : "Edit Channel"}
               className={`create-channel ${this.valid_submit()}`}
-              >
+            >
             </input>
+            <button className="cancel" onClick={this.props.closeModal}>Cancel</button>
           </section>
         </form>
         <br />
