@@ -34,6 +34,6 @@ class Api::ChannelsController < ApplicationController
   private
 
   def channel_params
-    params.require(:channel).permit(:id, :name, :description, :is_dm, :workspace_id)
+    params.require(:channel).permit(:name, :description, :is_dm, :workspace_id)
   end
 end

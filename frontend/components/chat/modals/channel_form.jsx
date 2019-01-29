@@ -53,7 +53,7 @@ class ChannelForm extends React.Component {
     return (
       <div className="channel-form-modal">
         <section className="channel-form-header">
-          <h1 className="channel-form-header">Create a {(this.state.is_dm === false) ? "" : "private "}channel</h1>
+          <h1 className="channel-form-header">{this.props.formType === "create" ? "Create a " : "Edit "} {(this.state.is_dm === false) ? "" : "private "}channel</h1>
           <p className="channel-form-description">Channels are where your members communicate. They're best when organized around a topic -- #leads, for example.</p>
 
           <button 

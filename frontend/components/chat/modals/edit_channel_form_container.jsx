@@ -6,10 +6,11 @@ import { closeModal } from '../../../actions/modal_actions';
 import { withRouter } from 'react-router-dom';
 
 const msp = (state) => {
+  const selectedChannel = state.entities.channels[state.ui.sidebar.selectedId]
   return {
     errors: state.errors,
     formType: 'edit',
-    selectedChannel: state.entities.channels[state.ui.sidebar.selectedId],
+    selectedChannel,
     channel: {
             id: selectedChannel.id,
             name: selectedChannel.name,
