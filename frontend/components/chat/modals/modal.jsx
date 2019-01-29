@@ -25,22 +25,22 @@ const Modal = (props) => {
   switch (props.modal) {
     case CREATE_CHANNEL_MODAL:
       return (
-        <div className={`modal channel-form-modal`}>
-          <button onClick={props.closeModal}>&#10005;</button>
+        <div className={`modal`}>
+          <button onClick={props.closeModal} className="modal-close-x">&#10005;</button>
           <CreateChannelForm />
         </div>
       );
     case EDIT_CHANNEL_MODAL:
       return (
-        <div className={`modal channel-form-modal`}>
-          <button onClick={props.closeModal}>&#10005;</button>
+        <div className={`modal`}>
+          <button onClick={props.closeModal} className="modal-close-x">&#10005;</button>
           <EditChannelForm />
         </div>
       );
     case UPDATE_USERNAME_MODAL:
       return (
         <div className='modal'>
-          <button onClick={props.closeModal}>&#10005;</button>
+          <button onClick={props.closeModal} className="modal-close-x">&#10005;</button>
           <UpdateUsernameForm />
         </div>
       );

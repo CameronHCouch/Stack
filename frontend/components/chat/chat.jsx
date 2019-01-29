@@ -11,7 +11,6 @@ class Chat extends React.Component {
   }
 
   render() {
-    debugger
     return (
       <div className="chatroom-wrapper">
         <ChannelSidebarContainer />

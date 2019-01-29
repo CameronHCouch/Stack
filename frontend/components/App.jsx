@@ -8,7 +8,6 @@ import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import ChatContainer from './chat/chat_container';
 import FormHeader from './session_form/form_header';
-import ChannelFormContainer from './chat/modals/create_channel_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Switch } from 'react-router-dom';
 
@@ -27,7 +26,6 @@ const App = () => (
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <ProtectedRoute path="/messages" component={ChatContainer} />
-      <ProtectedRoute path="/createchannel" component={ChannelFormContainer} />
     </Switch>
   </>
 );

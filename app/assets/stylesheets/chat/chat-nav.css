@@ -1,9 +1,3 @@
-h1.channel-name-head{
-  font-size: 18px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 900;
-}
-
 .chat-nav-bar{
   height: 60px;
   width: 100%;
@@ -11,8 +5,44 @@ h1.channel-name-head{
   background-color: white;
 }
 
+.chat-nav-bar-contents{
+  font-family: 'Lato', sans-serif;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.channel-info{
+  display: flex;
+  flex-direction: column;
+}
+
+h1.channel-name-head{
+  font-size: 18px;
+  font-weight: 900;
+  margin-left: 21px;
+}
+
 .chatroom-header{
   display: flex;
   height: 60px;
   width: 100%;
+}
+
+.channel-description{
+  font-size: 13px;
+  color: #616061;
+  margin-left: 21px;
+}
+
+
+.fa-cog{
+  cursor: pointer;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+.fa-cog:hover{
+  color: rgb(12,96,158);
 }

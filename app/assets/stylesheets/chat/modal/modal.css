@@ -10,3 +10,10 @@
   align-content: flex-end;
   margin: 0 auto;
 }
+
+.modal-close-x{
+  align-self: flex-end;
+  margin: 50px 50px 0 0;
+  font-size: 2rem;
+  color: #616061;
+}
