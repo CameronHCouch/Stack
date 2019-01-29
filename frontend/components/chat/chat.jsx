@@ -1,7 +1,7 @@
 import React from 'react';
 import NavContainer from './nav/nav_container.jsx';
 import ChannelSidebarContainer from './sidebar/channel_sidebar_container';
-// import NoUsernameModalContainer from './no_username_modal_container';
+import ChatRoom from './chatroom.js';
 import { Link, NavLink } from 'react-router-dom';
 
 class Chat extends React.Component {
@@ -15,6 +15,7 @@ class Chat extends React.Component {
       <div className="chatroom-wrapper">
         <ChannelSidebarContainer />
         <NavContainer />
+        <ChatRoom />
       </div>
     )
   }
