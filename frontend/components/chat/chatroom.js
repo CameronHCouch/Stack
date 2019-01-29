@@ -9,7 +9,7 @@ class ChatRoom extends React.Component {
   }
 
   componentDidMount() {
-    App.cable.subscriptions.create(
+    this.subscription = App.cable.subscriptions.create(
       { channel: "ChatChannel" },
       {
         received: data => {
@@ -32,17 +32,17 @@ class ChatRoom extends React.Component {
 
   loadChat(e) {
     e.preventDefault();
-    App.cable.subscriptions.subscriptions[0].load();
+    this.subscription.load();
   }
 
   componentDidUpdate() {
-    this.bottom.current.scrollIntoView();
+    // this.bottom.current.scrollIntoView();
   }
 
   render() {
     const messageList = this.state.messages.map((message, idx) => {
       return (
-        <li key={message.id}>
+        <li key={idx}>
           {message}
           <div ref={this.bottom} />
         </li>
@@ -55,7 +55,7 @@ class ChatRoom extends React.Component {
           Load Chat History
         </button>
         <div className="message-list">{messageList}</div>
-        <MessageForm />
+        <MessageForm currentUser={this.props.currentUser} currentChannel={this.props.selectedChannel} subscription={this.subscription}/>
       </div>
     );
   }

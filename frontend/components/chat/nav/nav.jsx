@@ -3,7 +3,6 @@ import React from 'react';
 class Nav extends React.Component {
   
   render() {
-    debugger
     return (
       <div className="chat-nav-bar">
         <div className="chat-nav-bar-contents">

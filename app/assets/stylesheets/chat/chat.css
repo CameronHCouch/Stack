@@ -3,3 +3,11 @@ div.chatroom-wrapper{
   flex-direction: row;
   height: 100vh;
 }
+
+.nav-and-chat-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+
+}

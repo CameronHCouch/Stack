@@ -3,7 +3,7 @@ import React from "react";
 class MessageForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { body: "" };
+    this.state = { body: ""};
   }
 
   update(field) {
@@ -13,7 +13,7 @@ class MessageForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    App.cable.subscriptions.subscriptions[0].speak({ message: this.state.body });
+    App.cable.subscriptions.subscriptions[1].speak({ message: {body: this.state.body, author_id: this.props.currentUser, channel_id: 1}});
     this.setState({ body: "" });
   }
 
