@@ -41,13 +41,19 @@ class ChatRoom extends React.Component {
 
   render() {
     const messageList = this.state.messages.map((message, idx) => {
+      // debugger
       return (
-        <li key={idx}>
-          {message}
+        <li 
+        className="message"
+        key={idx}>
+          {message.author_id}
+          {message.created_at}
+          {message.body}
           <div ref={this.bottom} />
         </li>
       );
     });
+
     return (
       <div className="chatroom-container">
         <button className="load-button"

@@ -1,7 +1,9 @@
+import React from 'react';
 import { connect } from 'react-redux';
 import SessionForm from './session_form';
 import { login, clearErrors, noEmailError } from '../../actions/session_actions';
 import { withRouter } from 'react-router-dom';
+import FormHeader from './form_header';
 
 const msp = (state) => {
   return {
@@ -18,4 +20,13 @@ const mdp = dispatch => {
   }
 }
 
-export default withRouter(connect(msp, mdp)(SessionForm))
+const SessionFormContainer = withRouter(connect(msp, mdp)(SessionForm));
+
+export default function(props) {
+  return (
+    <>
+    <FormHeader />
+    <SessionFormContainer/>
+    </>
+  );
+};

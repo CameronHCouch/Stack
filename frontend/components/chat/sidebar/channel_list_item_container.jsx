@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import ChannelListItem from './channel_list_item';
 import { selectChannel } from '../../../actions/ui_actions';
+import { withRouter } from 'react-router-dom';
 
 const msp = state => {
   return {
@@ -15,4 +16,4 @@ const mdp = dispatch => {
   };
 };
 
-export default connect(msp, mdp)(ChannelListItem);
+export default withRouter(connect(msp, mdp)(ChannelListItem));

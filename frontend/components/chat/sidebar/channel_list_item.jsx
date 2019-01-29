@@ -1,10 +1,10 @@
 import React from 'react';
-
 class ChannelListItem extends React.Component{
 
   handleSelect(){
+    debugger
     this.props.selectChannel(this.props.channel.id);
-    // this.props.history.push(`messages/${this.props.channel.name}`);
+    this.props.history.push(`/channels/${this.props.channel.id}`);
   }
 
   render(){

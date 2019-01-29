@@ -6,6 +6,7 @@ import Chat from './chat';
 const msp = (state) => {
   return {
     currentUser: state.session.currentUser,
+    selectedChannel: state.entities.channels[state.ui.sidebar.selectedId] || {},
   }
 }
 
