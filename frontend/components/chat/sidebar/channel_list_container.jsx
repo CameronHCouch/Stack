@@ -9,7 +9,9 @@ const msp = state => {
 };
 
 const mdp = dispatch => {
-  return {};
+  return {
+
+  };
 };
 
 export default connect(msp,mdp)(ChannelList);

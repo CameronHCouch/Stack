@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import AddChannelForm from './add_channel_form';
+import ChannelForm from './channel_form';
 import { updateChannel, clearErrors } from '../../../actions/channel_actions';
 import { selectChannel } from '../../../actions/ui_actions';
 import { withRouter } from 'react-router-dom';
@@ -26,4 +26,4 @@ const mdp = dispatch => {
   }
 }
 
-export default withRouter(connect(msp, mdp)(AddChannelForm))
+export default withRouter(connect(msp, mdp)(ChannelForm))

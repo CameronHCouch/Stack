@@ -2,7 +2,6 @@ export const RECEIVE_EMAIL = "RECEIVE_EMAIL";
 export const SELECT_CHANNEL = "SELECT_CHANNEL";
 export const SELECT_WORKSPACE = "SELECT_WORKSPACE";
 
-
 export const receiveEmail = (email) => {
   return {
     type: RECEIVE_EMAIL,

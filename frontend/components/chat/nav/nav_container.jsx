@@ -1,18 +1,15 @@
 import { connect } from 'react-redux';
-import { logout } from '../../../actions/session_actions';
 import Nav from './nav'
 
 const msp = (state) => {
   return {
     currentUser: state.session.currentUser,
-    selectedChannel: state.entities.channels[state.ui.selectedId] || {}
+    selectedChannel: state.entities.channels[state.ui.sidebar.selectedId] || {}
   }
 }
 
 const mdp = dispatch => {
-  return {
-    logout: () => dispatch(logout())
-  }
+  return {}
 }
 
 export default connect(msp, mdp)(Nav);

@@ -19,3 +19,11 @@ export const createChannel = channel => {
     data: { channel }
   });
 };
+
+export const updateChannel = channel => {
+  return $.ajax({
+    method: 'PATCH',
+    url: `/api/channel/${channel.id}`,
+    data: { channel }
+  });
+};

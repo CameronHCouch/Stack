@@ -15,13 +15,20 @@ class Api::ChannelsController < ApplicationController
 
     if @channel.save
       Subscription.create!(user_id: current_user.id, subscribable: @channel)
-      render "api/channels/show"
+      render :show
     else
       render json: @channel.errors.full_messages, status: 422
     end
   end
 
   def update
+    @channel = current_user.channels.find(params[:id])
+    if @channel.update_attributes(channel_params)
+      render :show
+    else
+      render json @channel.errors.full_messages, status: 422
+    end
+
   end
 
   private

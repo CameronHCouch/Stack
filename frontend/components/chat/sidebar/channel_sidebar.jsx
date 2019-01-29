@@ -10,10 +10,6 @@ class ChannelSidebar extends React.Component {
   componentDidMount() {
     this.props.requestChannels();
   }
-  
-  revealAddChannelForm(){
-    return ""
-  }
 
   render() {
     return (
@@ -32,7 +28,7 @@ class ChannelSidebar extends React.Component {
           </div>
 
           <div>
-            <h2 className="sidebar-add-channel"><a href="#" onClick={this.revealAddChannelForm.bind(this)}>+ Add a channel</a></h2>
+            <h2 className="sidebar-add-channel"><a href="#" onClick={this.props.createChannelForm}>+ Add a channel</a></h2>
           </div>
             
           <div className="sidebar-list">

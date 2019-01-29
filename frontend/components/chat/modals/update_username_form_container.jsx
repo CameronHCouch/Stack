@@ -1,7 +1,5 @@
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-// import { updateUser } from '../../actions/session_actions';
-import ChatChannelSidebar from '../chat_channel_sidebar';
+import ChatChannelSidebar from '../sidebar/channel_sidebar_container';
 
 const msp = (state) => {
   return {
@@ -15,4 +13,4 @@ const mdp = dispatch => {
   }
 }
 
-export default withRouter(connect(msp, mdp)(ChatChannelSidebar))
+export default connect(msp, mdp)(ChatChannelSidebar)

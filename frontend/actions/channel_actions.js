@@ -45,6 +45,12 @@ export const createChannel = (channel) => dispatch => {
     (errors) => dispatch(receiveErrors(errors.responseJSON)))
 }
 
+export const updateChannel = (channel) => dispatch => {
+  return ChannelAPIUtil.updateChannel(channel).then(
+    (channel) => dispatch(receiveChannel(channel)),
+    (errors) => dispatch(receiveErrors(errors.responseJSON)))
+}
+
 
 export const clearErrors = () => {
   return {
