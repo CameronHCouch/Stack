@@ -1,7 +1,7 @@
 import React from 'react';
 import NavContainer from './nav/nav_container.jsx';
 import ChannelSidebarContainer from './sidebar/channel_sidebar_container';
-import ChatRoom from './chatroom.js';
+import ChatRoomContainer from './chatroom_container.js';
 import { Link, NavLink } from 'react-router-dom';
 
 class Chat extends React.Component {
@@ -16,7 +16,7 @@ class Chat extends React.Component {
         <ChannelSidebarContainer />
         <div className="nav-and-chat-wrapper">
           <NavContainer />
-          <ChatRoom currentUser={this.props.currentUser} currentChannel={this.props.selectedChannel} />
+          <ChatRoomContainer currentUser={this.props.currentUser} currentChannel={this.props.selectedChannel} />
         </div>
       </div>
     )

@@ -1,5 +1,5 @@
 import React from "react";
-import MessageForm from "./message_form.js";
+import MessageForm from "./message_form";
 
 class ChatRoom extends React.Component {
   constructor(props) {
@@ -28,6 +28,7 @@ class ChatRoom extends React.Component {
         load: function () { return this.perform("load") }
       }
     );
+    this.props.requestUsers();
   }
 
   loadChat(e) {
@@ -41,14 +42,12 @@ class ChatRoom extends React.Component {
 
   render() {
     const messageList = this.state.messages.map((message, idx) => {
-      // debugger
       return (
         <li 
-        className="message"
+        className="message-wrapper"
         key={idx}>
-          {message.author_id}
-          {message.created_at}
-          {message.body}
+          <span className="message-user-info"><strong>{this.props.users[message.author_id].username}</strong>  <span className="message-time">{message.created_at.slice(11, 19)}</span></span>
+          <span className="message-body">{message.body}</span>
           <div ref={this.bottom} />
         </li>
       );
@@ -61,7 +60,11 @@ class ChatRoom extends React.Component {
           Load Chat History
         </button>
         <div className="message-list">{messageList}</div>
-        <MessageForm currentUser={this.props.currentUser} currentChannel={this.props.selectedChannel} subscription={this.subscription}/>
+        <MessageForm 
+        currentUser={this.props.currentUser} 
+        currentChannel={this.props.selectedChannel.id} 
+        subscription={this.subscription}
+        className="message-form"/>
       </div>
     );
   }

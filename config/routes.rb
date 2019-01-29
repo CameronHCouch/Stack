@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :api, defaults: { format: JSON } do
-    resources :users, only: [:create, :show]
+    resources :users, only: [:create, :show, :index]
     resource :session, only: [:create, :destroy]
     
     resources :workspaces, only: [:index, :show, :create, :destroy]
@@ -10,6 +10,6 @@ Rails.application.routes.draw do
     end
   end
 
-  root to: "static_pages#root"
+  root to: 'static_pages#root'
   mount ActionCable.server, at: '/cable'
 end

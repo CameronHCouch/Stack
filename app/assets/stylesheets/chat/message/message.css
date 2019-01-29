@@ -1,4 +1,26 @@
-.message{
+.message-wrapper{
   list-style: none;
   margin: 20px 25px 10px 70px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lato', sans-serif;
+}
+
+.message-time{
+  color: #616061;
+  font-size: 12px;
+}
+
+.message-user-info strong{
+  font-weight: 900;
+  color: #1d1c1d;
+}
+
+.hidden {
+  display: none;
+}
+
+.message-form{
+  position: absolute;
+  bottom: 0;
 }
