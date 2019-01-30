@@ -7,15 +7,13 @@ import { Link, NavLink } from 'react-router-dom';
 class Chat extends React.Component {
 
   componentDidMount(){
-    this.props.requestWorkspace(1);
+    this.props.requestWorkspaces();
   }
 
   render() {
     return (
       <div className="chatroom-wrapper">
-        <ChannelSidebarContainer 
-        workspace={this.props.workspace}
-        />
+        <ChannelSidebarContainer />
         <div className="nav-and-chat-wrapper">
           <NavContainer />
           <ChatRoomContainer 
