@@ -16,7 +16,8 @@ class User < ApplicationRecord
   validates :password_digest, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
-  after_initialize :ensure_session_token, :default_vals
+  before_save :default_vals
+  after_initialize :ensure_session_token
   attr_reader :password
 
   has_many :messages
@@ -55,5 +56,6 @@ class User < ApplicationRecord
 
   def default_vals
     self.username = self.username || self.email
+    self.img_url = self.img_url || "https://s3.us-east-2.amazonaws.com/couchstack/avatar#{rand(1..5)}.png"
   end
 end
