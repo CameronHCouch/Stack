@@ -11,9 +11,9 @@ class ChannelList extends React.Component {
   render(){
     let channels = this.props.channels;
     let channelLis = [];
-    debugger
     channels.forEach((channel, idx) => {
       if ((channel.is_dm == (this.props.channelType)) &&
+        (this.props.workspace) &&
         (this.props.workspace.id === channel.workspace_id)) {
         channelLis.push(<ChannelListItemContainer
           channelType={this.props.channelType} 

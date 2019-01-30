@@ -7,7 +7,7 @@ import { createChannelModal } from '../../../actions/modal_actions';
 const msp = (state) => {
   return {
     currentUser: state.entities.users[state.session.currentUser],
-    workspace: state.entities.workspaces[1]
+    workspace: state.entities.workspaces[1],
   };
 };
 
