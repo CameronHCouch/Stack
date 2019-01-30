@@ -16,7 +16,10 @@ class Chat extends React.Component {
         <ChannelSidebarContainer />
         <div className="nav-and-chat-wrapper">
           <NavContainer />
-          <ChatRoomContainer currentUser={this.props.currentUser} currentChannel={this.props.selectedChannel} />
+          <ChatRoomContainer 
+          currentUser={this.props.currentUser} 
+          currentChannel={this.props.selectedChannel} 
+          />
         </div>
       </div>
     )

@@ -1,12 +1,13 @@
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 import { requestWorkspace } from '../../actions/workspace_actions';
+import { selectChannel } from '../../actions/ui_actions';
 import Chat from './chat';
 
 const msp = (state) => {
   return {
     currentUser: state.session.currentUser,
-    selectedChannel: state.entities.channels[state.ui.sidebar.selectedId] || {},
+    selectedChannel: state.entities.channels[state.ui.sidebar.selectedId],
   }
 }
 
