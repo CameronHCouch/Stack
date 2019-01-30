@@ -12,7 +12,6 @@ class MessageForm extends React.Component {
   }
 
   handleSubmit(e) {
-    debugger
     e.preventDefault();
     App.cable.subscriptions.subscriptions[1].speak({ message: {body: this.state.body, author_id: this.props.currentUser, channel_id: this.props.currentChannel}});
     this.setState({ body: "" });
@@ -26,7 +25,8 @@ class MessageForm extends React.Component {
             type="text"
             value={this.state.body}
             onChange={this.update("body")}
-            placeholder="Put Words Here"
+            placeholder={`Message ${Object.keys(this.props.selectedChannel).length === 0 ? "" : this.props.selectedChannel.name}`}
+            className="message-form"
           />
           <input type="submit" className="hidden" />
         </form>

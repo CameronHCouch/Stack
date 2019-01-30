@@ -5,7 +5,6 @@ class ChatRoom extends React.Component {
   constructor(props) {
     super(props);
     this.state = { messages: [] };
-    this.bottom = React.createRef();
   }
 
   componentDidMount() {
@@ -37,7 +36,7 @@ class ChatRoom extends React.Component {
   }
 
   componentDidUpdate() {
-    // this.bottom.current.scrollIntoView();
+    document.getElementById('bottom').scrollIntoView();
   }
 
   render() {
@@ -53,7 +52,6 @@ class ChatRoom extends React.Component {
             <span className="message-body">{message.body}</span>
           </div>
         </div>
-          <div ref={this.bottom} />
         </li>
       );
     });
@@ -65,13 +63,15 @@ class ChatRoom extends React.Component {
           onClick={this.loadChat.bind(this)}>
           Load Chat History
         </button>
-        <div className="message-list">{messageList}</div>
+          <div className="message-list mCustomScrollbar" data-mcs-theme="dark">{messageList}</div>
+        <div id="bottom" />
       </div>
         <MessageForm 
-        currentUser={this.props.currentUser} 
+        currentUser={this.props.currentUser}
+        selectedChannel={this.props.selectedChannel} 
         currentChannel={this.props.selectedChannel.id} 
         subscription={this.subscription}
-        className="message-form"/>
+        />
       </div>
     );
   }

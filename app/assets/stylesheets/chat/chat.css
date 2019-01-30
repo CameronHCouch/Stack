@@ -14,5 +14,5 @@ div.chatroom-wrapper{
 
 div.message-list-wrapper{
   overflow-y:scroll;
-  height: 85vh;
+  height: 80vh;
 }
