@@ -74,16 +74,16 @@ class ChatRoom extends React.Component {
 
     return (
       <div className="chatroom-container">
-      <div className="message-list-wrapper">
-          <div className="message-list">{messageList}</div>
-        <div id="bottom" />
-      </div>
-        <MessageForm 
-        currentUser={this.props.currentUser}
-        selectedChannel={this.props.selectedChannel} 
-        currentChannel={this.props.selectedChannel.id} 
-        subscription={this.subscription}
-        />
+        <div className="message-list-wrapper">
+            <div className="message-list">{messageList}</div>
+          <div id="bottom" />
+        </div>
+          <MessageForm 
+          currentUser={this.props.currentUser}
+          selectedChannel={this.props.selectedChannel} 
+          currentChannel={this.props.selectedChannel.id} 
+          subscription={this.subscription}
+          />
       </div>
     );
   }
