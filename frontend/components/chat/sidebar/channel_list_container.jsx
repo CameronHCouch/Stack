@@ -4,7 +4,7 @@ import ChannelList from './channel_list';
 const msp = state => {
   return {
     channels: Object.values(state.entities.channels),
-    workspace: Object.values(state.entities.workspaces),
+    workspace: state.entities.workspaces,
   };
 };
 

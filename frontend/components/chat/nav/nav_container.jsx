@@ -5,7 +5,8 @@ import { editChannelModal } from '../../../actions/modal_actions';
 const msp = (state) => {
   return {
     currentUser: state.session.currentUser,
-    selectedChannel: state.entities.channels[state.ui.sidebar.selectedId] || {}
+    selectedChannel: state.entities.channels[state.ui.sidebar.selectedId] || {},
+    users: Object.values(state.entities.users),
   }
 }
 

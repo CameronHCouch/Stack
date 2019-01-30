@@ -9,6 +9,7 @@ class Nav extends React.Component {
           <div className="channel-info">
             <h1 className="channel-name-head">{this.props.selectedChannel.name}</h1>
             <div className="channel-description">
+              <span> <i className="fas fa-user"></i> {this.props.users.length} </span>
               <span>{this.props.selectedChannel.description}</span>
             </div>
           </div>
