@@ -7,8 +7,6 @@ class ChannelListItem extends React.Component{
   }
 
   render(){
-    // let selected = this.props.channel === selectedId ? 'selected' : '';
-    // add className selected that toggles if selectedId in state matches
     if (this.props.channel.is_dm == false) {
       return (
           <a href="#">

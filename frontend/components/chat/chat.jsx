@@ -13,12 +13,14 @@ class Chat extends React.Component {
   render() {
     return (
       <div className="chatroom-wrapper">
-        <ChannelSidebarContainer />
+        <ChannelSidebarContainer 
+        workspace={this.props.workspace}
+        />
         <div className="nav-and-chat-wrapper">
           <NavContainer />
           <ChatRoomContainer 
           currentUser={this.props.currentUser} 
-          currentChannel={this.props.selectedChannel} 
+          currentChannel={this.props.selectedChannel}
           />
         </div>
       </div>

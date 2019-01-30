@@ -24,7 +24,7 @@ class ChannelSidebar extends React.Component {
 
           <div className="sidebar-list">
             <h2 className="sidebar-list-title">Channels</h2>
-              <ChannelList channelType={false} />
+              <ChannelList channelType={false} workspace={this.props.workspace}/>
           </div>
 
           <div>
@@ -33,7 +33,7 @@ class ChannelSidebar extends React.Component {
             
           <div className="sidebar-list">
             <h2 className="sidebar-list-title">Direct Messages</h2>
-              <ChannelList channelType={true} />
+            <ChannelList channelType={true} workspace={this.props.workspace} />
           </div>
           <button className="chat-signout" onClick={() => this.props.logout()}>Sign Out</button>
         </div>
