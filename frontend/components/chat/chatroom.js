@@ -28,12 +28,13 @@ class ChatRoom extends React.Component {
       }
     );
     this.props.requestUsers();
-  }
-
-  loadChat(e) {
-    e.preventDefault();
     this.subscription.load();
   }
+
+  // loadChat(e) {
+  //   e.preventDefault();
+  //   this.subscription.load();
+  // }
 
   componentDidUpdate() {
     document.getElementById('bottom').scrollIntoView();
@@ -59,11 +60,11 @@ class ChatRoom extends React.Component {
     return (
       <div className="chatroom-container">
       <div className="message-list-wrapper">
-        <button className="load-button"
+        {/* <button className="load-button"
           onClick={this.loadChat.bind(this)}>
           Load Chat History
-        </button>
-          <div className="message-list mCustomScrollbar" data-mcs-theme="dark">{messageList}</div>
+        </button> */}
+          <div className="message-list">{messageList}</div>
         <div id="bottom" />
       </div>
         <MessageForm 
