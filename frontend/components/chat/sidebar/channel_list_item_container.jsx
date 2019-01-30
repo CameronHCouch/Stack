@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom';
 const msp = state => {
   return {
     currentUserId: state.session.id,
-    selectedId: state.ui.selectedId,
+    selectedId: state.ui.sidebar.selectedId,
   };
 };
 

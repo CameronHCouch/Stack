@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   width: 220px;
-  /* overflow-y: scroll; */
+  justify-content: space-between;
 }
 
 .chat-workspace-header{
@@ -96,6 +96,14 @@ div.sidebar-list ul.channel-names a:hover{
 button.chat-signout{
   background-color: #f33d60;
   padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+  opacity: 1;
+}
+
+button.chat-signout:hover{
+  background-color: #a3062b;
 }
 
 .sidebar-add-channel{
@@ -111,7 +119,8 @@ button.chat-signout{
   padding-top: 2px;
 }
 
-.selected-channel{
+div.sidebar-list ul.channel-names li.selected-channel{
   background-color: #0662a3;
   color: white;
+  opacity: 1;
 }

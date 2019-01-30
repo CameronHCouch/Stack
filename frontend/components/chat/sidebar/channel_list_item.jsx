@@ -7,6 +7,7 @@ class ChannelListItem extends React.Component{
   }
 
   render(){
+    debugger
     if (this.props.channel.is_dm == false) {
       return (
           <a href="#">
@@ -19,7 +20,8 @@ class ChannelListItem extends React.Component{
     } else {
       return (
           <a href="#">
-            <li onClick={this.handleSelect.bind(this)}>
+            <li className={(this.props.selectedId && (this.props.selectedId === this.props.channel.id)) ? "selected-channel" : ""} 
+              onClick={this.handleSelect.bind(this)}>
               <span className="offline">
                 <i className="far fa-circle"></i>
               </span>{this.props.channel.name}
