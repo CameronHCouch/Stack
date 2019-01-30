@@ -8,10 +8,11 @@ class ChatRoom extends React.Component {
   }
 
   componentDidMount() {
-    const channelId = this.props.selectedChannel.id
+    const channelId = this.props.selectedChannel.id;
     this.subscription = App.cable.subscriptions.subscriptions.find((subscription) => (
       subscription.identifier === `{"channel":"ChatChannel","channelId":"${channelId}"}`
     ));
+
     if (this.subscription){
       this.subscription.load({ channelId })
     } else {

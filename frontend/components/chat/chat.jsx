@@ -13,7 +13,7 @@ class Chat extends React.Component {
   render() {
     return (
       <div className="chatroom-wrapper">
-        <ChannelSidebarContainer />
+        <ChannelSidebarContainer/>
         <div className="nav-and-chat-wrapper">
           <NavContainer />
           <ChatRoomContainer 
