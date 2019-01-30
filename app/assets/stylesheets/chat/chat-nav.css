@@ -36,13 +36,15 @@ h1.channel-name-head{
   margin-left: 21px;
 }
 
-
-.fa-cog{
-  cursor: pointer;
-  margin-right: 15px;
+.chat-nav-icons{
   margin-top: 10px;
 }
+.chat-nav-icon{
+  cursor: pointer;
+  margin-right: 15px;
+  color: #616061;
+}
 
-.fa-cog:hover{
+.chat-nav-icon:hover{
   color: rgb(12,96,158);
 }

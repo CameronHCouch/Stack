@@ -13,7 +13,17 @@ class Nav extends React.Component {
               <span>{this.props.selectedChannel.description}</span>
             </div>
           </div>
-          <span onClick={this.props.editChannelModal}><i className="fas fa-cog fa-lg"></i></span>
+        <div className="chat-nav-icons">
+          <span 
+            className="chat-nav-icon">
+              <i class="fas fa-info-circle fa-lg"></i>
+          </span>
+          <span 
+            onClick={this.props.editChannelModal} 
+            className="chat-nav-icon">
+              <i className="fas fa-cog fa-lg"></i>
+          </span>
+        </div>
         </div>
       </div>
     )
