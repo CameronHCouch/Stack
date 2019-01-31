@@ -15,6 +15,12 @@ class Api::ChannelsController < ApplicationController
 
     if @channel.save
       Subscription.create!(user_id: current_user.id, subscribable: @channel)
+      if params[:channel][:member_list].length
+        invites = params[:channel][:member_list].split(" ")
+        invites.each do |member_id|
+          Subscription.create!(user_id: member_id, subscribable: @channel)
+        end
+      end
       render :show
     else
       render json: @channel.errors.full_messages, status: 422

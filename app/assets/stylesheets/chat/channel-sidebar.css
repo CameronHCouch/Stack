@@ -120,7 +120,7 @@ button.chat-signout:hover{
 }
 
 div.sidebar-list ul.channel-names li.selected-channel,
-div.whole-list-item.selected-channel{
+div.sidebar-list ul.channel-names div.whole-list-item.selected-channel{
   background-color: #0662a3;
   color: white;
   opacity: 1;
@@ -135,6 +135,11 @@ div.whole-list-item{
 div.whole-list-item:hover{
   background-color: rgb(37,3,38);
   cursor: pointer;
+}
+
+div.whole-list-item:hover div.delete-channel-button{
+  background-color: transparent;
+  opacity: 0.64;
 }
 
 div.delete-channel-button{

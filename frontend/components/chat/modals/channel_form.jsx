@@ -94,6 +94,8 @@ class ChannelForm extends React.Component {
             type='text'
             htmlFor="invites"
             className="invites"
+            value={this.state.member_list}
+            onChange={this.update('member_list')}
             />
           <section className="channel-form-buttons">
             <input

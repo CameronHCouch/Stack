@@ -14,7 +14,8 @@ const msp = (state) => {
             name: '',
             description: '',
             workspace_id: 2,
-            is_dm: false
+            is_dm: false,
+            member_list: '',
   }
   }
 }
