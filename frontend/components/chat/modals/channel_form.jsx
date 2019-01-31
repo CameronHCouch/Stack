@@ -89,6 +89,12 @@ class ChannelForm extends React.Component {
               className="description"
             />
           <p className="channel-form-input-description">What's this channel about?</p>
+          <label id="invites"><strong>Send invites to:</strong> (optional)</label>
+          <input
+            type='text'
+            htmlFor="invites"
+            className="invites"
+            />
           <section className="channel-form-buttons">
             <input
               type="submit"

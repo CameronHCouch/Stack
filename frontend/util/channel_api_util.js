@@ -27,3 +27,10 @@ export const updateChannel = channel => {
     data: { channel }
   });
 };
+
+export const deleteChannel = id => {
+  return $.ajax({
+    method: 'DELETE',
+    url: `/api/channels/${id}`,
+  })
+}

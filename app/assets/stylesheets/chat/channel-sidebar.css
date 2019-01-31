@@ -119,8 +119,31 @@ button.chat-signout:hover{
   padding-top: 2px;
 }
 
-div.sidebar-list ul.channel-names li.selected-channel{
+div.sidebar-list ul.channel-names li.selected-channel,
+div.whole-list-item.selected-channel{
   background-color: #0662a3;
   color: white;
   opacity: 1;
+}
+
+div.whole-list-item{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+div.whole-list-item:hover{
+  background-color: rgb(37,3,38);
+  cursor: pointer;
+}
+
+div.delete-channel-button{
+  opacity: 0;
+  margin-right: 5px;
+}
+
+div.delete-channel-button:hover{
+  opacity: 1;
+  margin-right: 5px;
+  color: white;
 }

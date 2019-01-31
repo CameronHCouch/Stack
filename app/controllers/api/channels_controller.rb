@@ -28,7 +28,12 @@ class Api::ChannelsController < ApplicationController
     else
       render json @channel.errors.full_messages, status: 422
     end
+  end
 
+  def destroy
+    @channel = current_user.channels.find(params[:id])
+    @channel.destroy
+    render :show
   end
 
   private
