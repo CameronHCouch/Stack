@@ -98,6 +98,7 @@ class ChannelForm extends React.Component {
             value={this.state.member_list}
             onChange={this.update('member_list')}
             />
+          <p className="channel-form-input-description">Separate usernames by spaces.</p>
           <section className="channel-form-buttons">
             <input
               type="submit"

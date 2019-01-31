@@ -16,8 +16,10 @@ const msp = (state) => {
             name: selectedChannel.name,
             description: selectedChannel.description,
             workspace_id: selectedChannel.workspace_id,
-            is_dm: selectedChannel.is_dm
-    }
+            is_dm: selectedChannel.is_dm,
+            member_list: "",
+    },
+    users: state.entities.users,
   }
 }
 

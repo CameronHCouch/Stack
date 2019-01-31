@@ -17,8 +17,9 @@ class Api::ChannelsController < ApplicationController
       Subscription.create!(user_id: current_user.id, subscribable: @channel)
       if params[:channel][:member_list].length
         invites = params[:channel][:member_list].split(" ")
-        invites.each do |member_id|
-          Subscription.create!(user_id: member_id, subscribable: @channel)
+        invites.each do |username|
+          invited_user = User.find_by(username: username)
+          Subscription.create!(user_id: invited_user.id, subscribable: @channel)
         end
       end
       render :show
@@ -32,8 +33,9 @@ class Api::ChannelsController < ApplicationController
     if @channel.update_attributes(channel_params)
       if params[:channel][:member_list].length
         invites = params[:channel][:member_list].split(" ")
-        invites.each do |member_id|
-          Subscription.create!(user_id: member_id, subscribable: @channel)
+        invites.each do |username|
+          invited_user = User.find_by(username: username)
+          Subscription.create!(user_id: invited_user.id, subscribable: @channel)
         end
       end
       render :show
