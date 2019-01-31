@@ -1,6 +1,8 @@
 export const RECEIVE_EMAIL = "RECEIVE_EMAIL";
 export const SELECT_CHANNEL = "SELECT_CHANNEL";
 export const SELECT_WORKSPACE = "SELECT_WORKSPACE";
+export const DISPLAY_INFO_SIDEBAR = "DISPLAY_INFO_SIDEBAR";
+export const HIDE_INFO_SIDEBAR = "HIDE_INFO_SIDEBAR";
 
 export const receiveEmail = (email) => {
   return {
@@ -24,3 +26,10 @@ export const selectWorkspace = workspaceId => {
   };
 };
 
+export const displayInfoSidebar = () => ({
+  type: DISPLAY_INFO_SIDEBAR,
+});
+
+export const hideInfoSidebar = () => ({
+  type: HIDE_INFO_SIDEBAR,
+});

@@ -29,7 +29,7 @@ class InfoSidebar extends React.Component {
 
         <div className="info-section-wrapper">
           <div className="channel-details-header info-header">
-            <h2><i className="fas fa-info-circle info-sidebar"></i> Channel Details</h2>
+            <h2><i className="fas fa-info-circle info-sidebar"></i><span className="info-plaintext">Channel Details</span></h2>
             <span onClick={this.toggleVisibleDescription.bind(this)} 
               className={`arrow ${this.state.visibleDescription ? "rotate" : ""}`}
               >
@@ -54,8 +54,7 @@ class InfoSidebar extends React.Component {
           <div className="user-list-header info-header">
             <h2> 
               <i className="fas fa-user info-sidebar"></i> 
-              {this.props.members.length} 
-              Members 
+              <span className="info-plaintext">{this.props.members.length} Members</span>
             </h2>
             <span onClick={this.toggleVisibleMembers.bind(this)} 
               className={`arrow ${this.state.visibleMembers ? "rotate" : ""}`}

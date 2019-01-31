@@ -23,6 +23,6 @@ export const updateUsernameModal = () => {
 
 export const closeModal = () => {
   return {
-    type: CLOSE_MODAL
+    type: CLOSE_MODAL,
   };
 };

@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import Nav from './nav';
 import { editChannelModal } from '../../../actions/modal_actions';
+import { displayInfoSidebar } from '../../../actions/ui_actions';
 
 const msp = (state) => {
   return {
@@ -13,7 +14,7 @@ const msp = (state) => {
 const mdp = dispatch => {
   return {
     editChannelModal: () => dispatch(editChannelModal()),
-
+    displayInfoSidebar: () => dispatch(displayInfoSidebar()),
   };
 };
 
