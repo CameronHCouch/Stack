@@ -8,13 +8,22 @@
 .user-info-wrapper{
   display: flex;
   height: 30px;
+  align-items: center;
+  padding-left: 15px;
+  border: 1px solid white;
+}
+
+.user-info-wrapper:hover{
+  background-color: rgb(233,245,250);
+  border: 1px solid rgb(207,233,244);
 }
 
 
 .small-user-icon{
   width: 20px;
   height: 20px;
-  margin-left: 4px;
+  margin-left: 8px;
+  border-radius: 3.2px;
 }
 
 .username{
@@ -23,4 +32,14 @@
 
 .username strong{
   font-weight: 700;
+}
+
+.user-online{
+  color: #1d7859;
+  font-size: 0.5rem;
+}
+
+.user-offline{
+  color: #616061;
+  font-size: 0.5rem;
 }

@@ -16,7 +16,8 @@ div.channel-info-header{
 
 div.info-sidebar{
   font-family: 'Lato', sans-serif;
-  width: 300px;
+  width: 315px;
+  display: block;
 }
 
 .info-close-x{
@@ -32,14 +33,10 @@ div.info-sidebar{
   color: #616061;
 }
 
-.info-sidebar{
-  margin-right: 10px;
-}
-
 div.info-header{
   display: flex;
   align-items: center;
-  /* border-bottom: 1px solid rgb(221, 221, 221); */
+  justify-content: space-between;
   height: 23px;
   padding: 17px 10px;
   font-size: 18px;
@@ -49,6 +46,48 @@ div.info-header{
 
 div.info-section-wrapper{
   border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.fa-caret-right{
+  color: #616061;
+}
+
+.fa-caret-right:hover{
+  color: black;
+  cursor: pointer;
+}
+
+span.arrow.rotate{
+  -webkit-transform:rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.members-list-wrapper{
+  margin: 20px 0px;
+}
+
+.info-channel-description{
+  font-size: 15px;
+  color: #1d1c1d;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  margin: 10px 0px;
+}
+
+.info-channel-description-section{
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-channel-description-subtitle{
+  color: #616061;
+  font-weight: 900;
+  font-size: 12.8px;
 }
 
 .hidden-info{

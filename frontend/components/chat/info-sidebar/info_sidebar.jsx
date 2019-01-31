@@ -19,6 +19,7 @@ class InfoSidebar extends React.Component {
   }
 
   render(){
+    debugger
     return (
       <div className="info-sidebar">
         <div className="channel-info-header">
@@ -28,16 +29,39 @@ class InfoSidebar extends React.Component {
 
         <div className="info-section-wrapper">
           <div className="channel-details-header info-header">
-            <h2><i className="fas fa-info-circle info-sidebar"></i>Channel Details</h2>
-            <span onClick={this.toggleVisibleDescription.bind(this)}><i className="fas fa-caret-right"></i></span>
+            <h2><i className="fas fa-info-circle info-sidebar"></i> Channel Details</h2>
+            <span onClick={this.toggleVisibleDescription.bind(this)} 
+              className={`arrow ${this.state.visibleDescription ? "rotate" : ""}`}
+              >
+              <i className='fas fa-caret-right'></i>
+            </span>
           </div>
-          <p className={`info-channel-description  ${this.state.visibleDescription ? "display" : "hidden-info"}`}>{this.props.selectedChannel.description}</p>
+          <div className={`info-channel-description ${this.state.visibleDescription ? "display" : "hidden-info"}`}>
+            <div className="info-channel-description-section">
+              <span className="info-channel-description-subtitle">Purpose</span>
+              {this.props.selectedChannel.description}
+            </div>
+            <div className="info-channel-description-section">
+              <span className="info-channel-description-subtitle">Created</span>
+              Created by Admin! on {this.props.selectedChannel.created_at ? 
+                this.props.selectedChannel.created_at.slice(0,10) :
+                ""}
+            </div>
+          </div>
         </div>
 
         <div className="info-section-wrapper">
           <div className="user-list-header info-header">
-            <h2> <i className="fas fa-user info-sidebar"></i> {this.props.members.length} Members </h2>
-            <span onClick={this.toggleVisibleMembers.bind(this)}><i className="fas fa-caret-right"></i></span>
+            <h2> 
+              <i className="fas fa-user info-sidebar"></i> 
+              {this.props.members.length} 
+              Members 
+            </h2>
+            <span onClick={this.toggleVisibleMembers.bind(this)} 
+              className={`arrow ${this.state.visibleMembers ? "rotate" : ""}`}
+              >
+              <i className='fas fa-caret-right'></i>
+            </span>
           </div>
           <div className={`members-list-wrapper ${this.state.visibleMembers ? "display" : "hidden-info"}`}>
             <MemberListContainer currentUser={this.props.currentUser} />
