@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 
 const msp = (state) => {
   return {
-
+    members: state.entities.users || {},
   };
 };
 

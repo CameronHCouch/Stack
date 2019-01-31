@@ -1,0 +1,26 @@
+.member-list{
+  font-size: 15px;
+  color: #1d1c1d;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info-wrapper{
+  display: flex;
+  height: 30px;
+}
+
+
+.small-user-icon{
+  width: 20px;
+  height: 20px;
+  margin-left: 4px;
+}
+
+.username{
+  margin-left: 8px;
+}
+
+.username strong{
+  font-weight: 700;
+}

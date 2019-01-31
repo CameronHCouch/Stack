@@ -6,7 +6,7 @@ class ChannelForm extends React.Component {
     super(props);
     this.state = props.channel;
     this.update = this.update.bind(this);
-    this.toggleChannelForm = this.toggleChannelForm.bind(this);
+    this.visible = false;
   };
 
   errors() {
@@ -45,9 +45,17 @@ class ChannelForm extends React.Component {
       return ""
     }
   }
+  
+  toggleVisibility(){
+    this.visible = !this.visible
+  }
 
-  toggleChannelForm(){
-    return "visible"
+  showMemberList(){
+    if (this.visible == false){
+      return "invisible"
+    } else {
+      return "visible"
+    }
   }
 
   render() {
@@ -100,7 +108,9 @@ class ChannelForm extends React.Component {
             value={this.state.member_list}
             onChange={this.update('member_list')}
             />
-            {/* <MemberListContainer members={this.props.users} /> */}
+          {/* <div className={this.showMemberList()}>
+            <MemberListContainer members={this.props.users} />
+          </div> */}
           <p className="channel-form-input-description">Separate usernames by spaces.</p>
 
           <section className="channel-form-buttons">

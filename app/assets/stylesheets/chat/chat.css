@@ -10,6 +10,11 @@ div.chatroom-wrapper{
   width: 100%;
 }
 
+.chat-and-info-wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
 div.message-list-wrapper{
   overflow-y:scroll;
   height: 85vh;
@@ -20,5 +25,6 @@ div.chatroom-container{
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  width: 100%;
   background-color: white;
 }
