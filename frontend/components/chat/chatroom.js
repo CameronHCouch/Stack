@@ -5,7 +5,7 @@ class ChatRoom extends React.Component {
   constructor(props) {
     super(props);
     this.state = { messages: [] };
-  }
+  };
 
   componentDidMount() {
     const channelId = this.props.selectedChannel.id;
@@ -38,7 +38,7 @@ class ChatRoom extends React.Component {
     };
     this.props.requestUsers();
     this.subscription.load({ channelId });
-  }
+  };
 
   componentDidUpdate(prevProps) {
     const channelId = this.props.selectedChannel.id
@@ -46,12 +46,12 @@ class ChatRoom extends React.Component {
     if (channelId && (prevProps.selectedChannel.id !== channelId)){
       this.subscription.unsubscribe();
       this.subscription.load({ channelId });
-    }
-  }
+    };
+  };
 
   componentWillUnmount(){
     this.subscription.unsubscribe();
-  }
+  };
 
   render() {
     const messageList = this.state.messages.map((message, idx) => {
@@ -87,7 +87,7 @@ class ChatRoom extends React.Component {
           />
       </div>
     );
-  }
-}
+  };
+};
 
 export default ChatRoom;

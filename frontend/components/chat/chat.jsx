@@ -8,7 +8,7 @@ class Chat extends React.Component {
 
   componentDidMount(){
     this.props.requestWorkspaces();
-  }
+  };
 
   render() {
     return (
@@ -23,7 +23,7 @@ class Chat extends React.Component {
         </div>
       </div>
     )
-  }
-}
+  };
+};
 
 export default Chat;

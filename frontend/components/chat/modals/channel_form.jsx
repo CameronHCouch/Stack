@@ -1,4 +1,5 @@
 import React from 'react';
+import MemberListContainer from '../member_list/member_list_container';
 
 class ChannelForm extends React.Component {
   constructor(props) {
@@ -6,7 +7,6 @@ class ChannelForm extends React.Component {
     this.state = props.channel;
     this.update = this.update.bind(this);
     this.toggleChannelForm = this.toggleChannelForm.bind(this);
-    debugger
   };
 
   errors() {
@@ -81,6 +81,7 @@ class ChannelForm extends React.Component {
               htmlFor="name"
               placeholder="# e.g. leads" />
           <p className="channel-form-input-description">Names must be lowercase, without spaces or periods, and shorter than 22 characters.</p>
+
           <label id="description"><strong>Purpose</strong> (optional)</label>
             <input
               type='text'
@@ -90,6 +91,7 @@ class ChannelForm extends React.Component {
               className="description"
             />
           <p className="channel-form-input-description">What's this channel about?</p>
+
           <label id="invites"><strong>Send invites to:</strong> (optional)</label>
           <input
             type='text'
@@ -98,7 +100,9 @@ class ChannelForm extends React.Component {
             value={this.state.member_list}
             onChange={this.update('member_list')}
             />
+            {/* <MemberListContainer members={this.props.users} /> */}
           <p className="channel-form-input-description">Separate usernames by spaces.</p>
+
           <section className="channel-form-buttons">
             <input
               type="submit"

@@ -21,7 +21,7 @@ class HeaderNav extends React.Component {
         </div>
       )
     );
-  }
+  };
 
   render() {
     return (
@@ -42,7 +42,7 @@ class HeaderNav extends React.Component {
         </nav>
       </header>
     )
-  }
-}
+  };
+};
 
 export default HeaderNav;

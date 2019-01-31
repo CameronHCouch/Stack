@@ -9,15 +9,15 @@ const msp = (state) => {
     user: { email: "", password: "" },
     errors: state.errors,
     formType: 'signup'
-  }
-}
+  };
+};
 
 const mdp = dispatch => {
   return {
     clearErrors: () => dispatch(clearErrors()),
     receiveEmail: (email) => dispatch(receiveEmail(email)),
     noEmailError: () => dispatch(noEmailError()),
-  }
-}
+  };
+};
 
 export default withRouter(connect(msp, mdp)(GetStartedForm));

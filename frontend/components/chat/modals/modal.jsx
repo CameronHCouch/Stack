@@ -46,7 +46,7 @@ const Modal = (props) => {
       );
     default:
       return null;
-  }
+  };
 
 };
 

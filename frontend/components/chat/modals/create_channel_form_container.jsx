@@ -18,8 +18,8 @@ const msp = (state) => {
             member_list: '',
   },
     users: state.entities.users,
-  }
-}
+  };
+};
 
 const mdp = dispatch => {
   return {
@@ -27,7 +27,7 @@ const mdp = dispatch => {
     selectChannel: (channel) => dispatch(selectChannel(channel)),
     clearErrors: () => dispatch(clearErrors()),
     closeModal: () => dispatch(closeModal()),
-  }
-}
+  };
+};
 
-export default withRouter(connect(msp, mdp)(ChannelForm))
+export default withRouter(connect(msp, mdp)(ChannelForm));

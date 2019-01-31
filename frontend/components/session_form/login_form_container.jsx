@@ -9,16 +9,16 @@ const msp = (state) => {
   return {
     errors: state.errors,
     formType: 'login',
-  }
-}
+  };
+};
 
 const mdp = dispatch => {
   return {
     processForm: (user) => dispatch(login(user)),
     clearErrors: () => dispatch(clearErrors()),
     noEmailError: () => dispatch(noEmailError()),
-  }
-}
+  };
+};
 
 const SessionFormContainer = withRouter(connect(msp, mdp)(SessionForm));
 

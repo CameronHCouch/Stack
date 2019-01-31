@@ -4,12 +4,12 @@ class MessageForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { body: ""};
-  }
+  };
 
   update(field) {
     return e =>
       this.setState({ [field]: e.currentTarget.value });
-  }
+  };
 
   handleSubmit(e) {
     e.preventDefault();
@@ -21,7 +21,7 @@ class MessageForm extends React.Component {
       }
     });
     this.setState({ body: "" });
-  }
+  };
 
   render() {
     return (
@@ -38,7 +38,7 @@ class MessageForm extends React.Component {
         </form>
       </div>
     );
-  }
-}
+  };
+};
 
 export default MessageForm;

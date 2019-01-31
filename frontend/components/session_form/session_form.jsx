@@ -12,30 +12,30 @@ class SessionForm extends React.Component {
         return <li className="error" key={idx}>{er}</li>
       })
       )
-    }
-  }
+    };
+  };
   
   componentDidMount() {
     this.props.clearErrors();
     if (this.props.email){
       this.setState({email: this.props.email});
-    }
-  }
+    };
+  };
 
 
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state).then(() =>
       this.props.history.replace('/messages'));
-  }
+  };
 
   updatePassword(e) {
     this.setState({ password: e.currentTarget.value })
-  }
+  };
 
   updateEmail(e) {
     this.setState({ email: e.currentTarget.value })
-  }
+  };
 
   demo_user(){
     if (this.props.match.path === '/login') {
@@ -44,8 +44,8 @@ class SessionForm extends React.Component {
       onClick={this.loginDemoUser.bind(this)}>
         <div>Demo User</div>
       </button>
-    }
-  }
+    };
+  };
 
   loginDemoUser(e){
     e.preventDefault();
@@ -54,7 +54,7 @@ class SessionForm extends React.Component {
     this.setState({ email: '', password: '' }, () =>
       this.demoLogin(emailArr, passwordArr)
     );
-  }
+  };
 
   demoLogin(emailArr, passwordArr){
     let { email } = this.state;
@@ -77,8 +77,8 @@ class SessionForm extends React.Component {
     } else {
       this.props.processForm(this.state).then(() =>
         this.props.history.replace('/messages'));
-      }
-    }
+      };
+    };
 
   render() {
     return (
@@ -121,7 +121,7 @@ class SessionForm extends React.Component {
         <br />
       </div>
     )
-  }
-}
+  };
+};
 
 export default SessionForm;

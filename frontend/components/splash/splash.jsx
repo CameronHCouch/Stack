@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import GetStartedFormContainer from '../session_form/get_started_form_container'
+import GetStartedFormContainer from '../session_form/get_started_form_container';
 
 export default () => {
   return (
@@ -24,4 +24,4 @@ export default () => {
       {document.body.classList.remove('form-backdrop')}
     </div>
   )
-}
+};

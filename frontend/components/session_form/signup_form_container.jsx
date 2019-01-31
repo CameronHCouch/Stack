@@ -10,16 +10,16 @@ const msp = (state) => {
     errors: state.errors,
     formType: 'signup',
     email: state.ui.email || ""
-  }
-}
+  };
+};
 
 const mdp = dispatch => {
   return {
     processForm: (user) => dispatch(signup(user)),
     clearErrors: () => dispatch(clearErrors()),
     noEmailError: () => dispatch(noEmailError())
-  }
-}
+  };
+};
 
 
 const SessionFormContainer = withRouter(connect(msp, mdp)(SessionForm));

@@ -12,8 +12,8 @@ class GetStartedForm extends React.Component {
         return <li className="error" key={idx}>{er}</li>
       })
       )
-    }
-  }
+    };
+  };
 
   handleSubmit(e) {
     e.preventDefault();
@@ -22,16 +22,16 @@ class GetStartedForm extends React.Component {
         this.props.history.push('/signup');
       } else {
       this.props.noEmailError();
-    }
-  }
+    };
+  };
 
   componentDidMount() {
     this.props.clearErrors();
-  }
+  };
 
   updateEmail(e) {
     this.setState({ email: e.currentTarget.value })
-  }
+  };
 
   demo_user() {
     if (this.props.match.path === '/login') {
@@ -40,8 +40,8 @@ class GetStartedForm extends React.Component {
         onClick={this.loginDemoUser.bind(this)}>
         Demo User
       </button>
-    }
-  }
+    };
+  };
 
   render() {
     return (
@@ -67,7 +67,7 @@ class GetStartedForm extends React.Component {
         <br />
       </div>
     )
-  }
-}
+  };
+};
 
 export default GetStartedForm;
