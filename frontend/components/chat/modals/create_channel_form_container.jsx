@@ -16,7 +16,8 @@ const msp = (state) => {
             workspace_id: 2,
             is_dm: false,
             member_list: '',
-  }
+  },
+    users: state.entities.users,
   }
 }
 

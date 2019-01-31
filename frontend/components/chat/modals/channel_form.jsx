@@ -6,6 +6,7 @@ class ChannelForm extends React.Component {
     this.state = props.channel;
     this.update = this.update.bind(this);
     this.toggleChannelForm = this.toggleChannelForm.bind(this);
+    debugger
   };
 
   errors() {

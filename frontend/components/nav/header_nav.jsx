@@ -27,7 +27,7 @@ class HeaderNav extends React.Component {
     return (
       <header className="nav-bar">
         <Link to="/">
-          <img className="logo-img" src="https://s3.us-east-2.amazonaws.com/couchstack/logo_text.png" />
+          <img className="logo-img" src="https://s3.us-east-2.amazonaws.com/couchstack/logo_text_recolor.png" />
         </Link>
         <nav>
           <ul className="nav-links">

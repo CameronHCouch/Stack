@@ -7,7 +7,6 @@ class ChannelListItem extends React.Component{
   }
 
   render(){
-    debugger
     if (this.props.channel.is_dm == false) {
       return (
           <a href="#">
