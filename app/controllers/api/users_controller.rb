@@ -8,6 +8,8 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       login(@user)
+      Subscription.create!(user_id: current_user.id, subscribable: Workspace.first)
+      Subscription.create!(user_id: current_user.id, subscribable: Workspace.first.channels[0])
       render :show
     else
       render json: @user.errors.full_messages, status: 400

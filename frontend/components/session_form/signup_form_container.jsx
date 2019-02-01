@@ -9,7 +9,7 @@ const msp = (state) => {
   return {
     errors: state.errors,
     formType: 'signup',
-    email: state.ui.email || ""
+    email: state.ui.sidebar.email || ""
   };
 };
 

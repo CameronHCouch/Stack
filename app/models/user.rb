@@ -56,6 +56,6 @@ class User < ApplicationRecord
 
   def default_vals
     self.username = self.username || self.email
-    self.img_url = self.img_url || "https://s3.us-east-2.amazonaws.com/couchstack/avatar#{rand(1..5)}.png"
+    self.img_url = self.img_url || "https://s3.us-east-2.amazonaws.com/couchstack/avatar#{rand(1..16)}.png"
   end
 end
