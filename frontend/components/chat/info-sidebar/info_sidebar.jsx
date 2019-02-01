@@ -19,12 +19,11 @@ class InfoSidebar extends React.Component {
   }
 
   render(){
-    debugger
     return (
       <div className="info-sidebar">
         <div className="channel-info-header">
           <h1 className="channel-info">About #{this.props.selectedChannel.name}</h1>
-          <button className="info-close-x">&#10005;</button>
+          <button onClick={this.props.hideInfoSidebar} className="info-close-x">&#10005;</button>
         </div>
 
         <div className="info-section-wrapper">

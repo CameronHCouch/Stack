@@ -1,7 +1,18 @@
 import React from 'react';
 
 class Nav extends React.Component {
-  
+  constructor(props){
+    super(props);
+    this.state = {
+      sidebarVisible: this.props.sidebarVisible
+    }
+  }
+
+  handleClick(){
+    this.state.sidebarVisible ? this.props.hideInfoSidebar() : this.props.displayInfoSidebar();
+    this.setState({ sidebarVisible: !this.state.sidebarVisible })
+  }
+
   render() {
     return (
       <div className="chat-nav-bar">
@@ -15,7 +26,9 @@ class Nav extends React.Component {
           </div>
         <div className="chat-nav-icons">
           <span 
-            className="chat-nav-icon">
+            className="chat-nav-icon"
+            onClick={this.handleClick.bind(this)}
+            >
               <i className="fas fa-info-circle fa-lg"></i>
           </span>
           <span 

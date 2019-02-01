@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import InfoSidebar from './info_sidebar';
+import { hideInfoSidebar } from '../../../actions/ui_actions';
 
 const msp = (state) => {
   return {

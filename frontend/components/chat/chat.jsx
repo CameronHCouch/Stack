@@ -2,7 +2,7 @@ import React from 'react';
 import NavContainer from './nav/nav_container.jsx';
 import ChannelSidebarContainer from './sidebar/channel_sidebar_container';
 import ChatRoomContainer from './chatroom_container.js';
-import InfoSidebarContainer from './info-sidebar/info_sidebar_container';
+import InfoPopoutManager from './popouts/info_popout_manager';
 import { Link, NavLink } from 'react-router-dom';
 
 class Chat extends React.Component {
@@ -19,7 +19,7 @@ class Chat extends React.Component {
           <NavContainer />
           <div className="chat-and-info-wrapper">
             <ChatRoomContainer />
-            <InfoSidebarContainer />
+            <InfoPopoutManager />
           </div>
         </div>
       </div>

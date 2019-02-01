@@ -13,8 +13,6 @@ export default (state = null, action) => {
       return HIDE_INFO_SIDEBAR;
     case RECEIVE_CHANNEL:
       return null;
-    case CLOSE_MODAL:
-      return null;
     default:
       return state;
   }
