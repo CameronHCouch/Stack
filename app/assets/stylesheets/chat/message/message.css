@@ -40,6 +40,7 @@ input.message-form[type=text]{
 .the-whole-message img{
   width: 36px;
   height: 36px;
+  border-radius: 3px;
 }
 
 .message{

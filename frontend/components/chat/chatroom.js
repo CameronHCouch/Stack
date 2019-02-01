@@ -64,7 +64,7 @@ class ChatRoom extends React.Component {
           <div className="message">
             <span className="message-user-info">
             <strong>{this.props.users[message.author_id].username}</strong>
-            <span className="message-time">{message.created_at.slice(11, 19)}</span>
+            <span className="message-time"> {message.created_at.slice(11, 16)}</span>
             </span>
             <span className="message-body">{message.body}</span>
           </div>
