@@ -22,6 +22,7 @@ class Chat extends React.Component {
             <InfoPopoutManager />
           </div>
         </div>
+        {document.body.classList.remove('form-backdrop')}
       </div>
     )
   };
