@@ -1,7 +1,7 @@
 # Stack
 
 
-![alt text](https://s3.us-east-2.amazonaws.com/couchstack/logo_text_recolor.png "Stack Logo")
+![Stack Logo](https://s3.us-east-2.amazonaws.com/couchstack/logo_text_recolor.png)
 
 Visit [Stack](https://couch-stack.herokuapp.com/#/)!
 
@@ -10,6 +10,8 @@ Stack is a Slack clone, a workplace messaging app that brings teams together. On
 
 ### Technologies
 Stack was created using *React-Redux* for the frontend and *Rails* for backend. Messages are sent and received in real-time, using *Websockets* through Rails' built-in *Action Cable* feature.
+
+![Stack Splash Page](https://s3.us-east-2.amazonaws.com/couchstack/splash_screenshot.png)
 
 ## Features
 
@@ -89,7 +91,7 @@ def create
   end
 ```
 
-When creating a new channel, users can invite other workspace members to this channel. The Channels Controller handles this by splitting a string and creating new Subscriptions for each invited member. 
+When creating (or updating) a new channel, users can invite other workspace members to this channel. The Channels Controller handles this by splitting a string and creating new Subscriptions for each invited member. 
 
 The Subscription#create method also shows the polymorphic 'subscribable' association. Using this single Subscription table, users can join either a Workspace or a Channel under the key of 'subscribable' pointing to the desired channel or workspace.
 
