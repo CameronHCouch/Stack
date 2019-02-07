@@ -49,7 +49,7 @@ class SessionForm extends React.Component {
 
   loginDemoUser(e){
     e.preventDefault();
-    const emailArr = 'guest@user.com'.split('');
+    const emailArr = 'charlie@user.com'.split('');
     const passwordArr = 'password'.split("");
     this.setState({ email: '', password: '' }, () =>
       this.demoLogin(emailArr, passwordArr)
