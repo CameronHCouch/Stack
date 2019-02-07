@@ -81,6 +81,7 @@ p .splash-text {
 aside{
   margin-top: 16px;
   margin-bottom: 35px;
+  margin-right: 1px;
   font-size: 14px;
 }
 
@@ -101,7 +102,8 @@ form .get-started-input{
 
 .get-started-form{
   display: flex;
-  align-content: center
+  align-content: center;
+  min-width: 440px;
 }
 
 
