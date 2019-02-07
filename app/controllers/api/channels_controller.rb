@@ -35,7 +35,9 @@ class Api::ChannelsController < ApplicationController
         invites = params[:channel][:member_list].split(" ")
         invites.each do |username|
           invited_user = User.find_by(username: username)
-          Subscription.create!(user_id: invited_user.id, subscribable: @channel)
+          unless @channel.members.includes(invited_user)
+            Subscription.create!(user_id: invited_user.id, subscribable: @channel)
+          end
         end
       end
       render :show

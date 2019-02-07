@@ -11,8 +11,9 @@ const msp = (state) => {
 };
 
 const mdp = dispatch => {
+  debugger
   return {
-    requestUsers: () => dispatch(requestUsers()),
+    requestUsers: (channelId) => dispatch(requestUsers(channelId)),
   };
 };
 

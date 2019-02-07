@@ -9,13 +9,16 @@ class ChatRoom extends React.Component {
 
   componentDidMount() {
     const channelId = this.props.selectedChannel.id;
+    this.props.requestUsers();
     this.subscription = App.cable.subscriptions.subscriptions.find((subscription) => (
       subscription.identifier === `{"channel":"ChatChannel","channelId":"${channelId}"}`
     ));
 
     if (this.subscription){
+      debugger
       this.subscription.load({ channelId })
     } else {
+      debugger
       this.subscription = App.cable.subscriptions.create(
         { channel: "ChatChannel", channelId },
         {
@@ -36,8 +39,6 @@ class ChatRoom extends React.Component {
         }
       );
     };
-    this.props.requestUsers();
-    this.subscription.load({ channelId });
   };
 
   componentDidUpdate(prevProps) {
@@ -55,12 +56,13 @@ class ChatRoom extends React.Component {
 
   render() {
     const messageList = this.state.messages.map((message, idx) => {
+      debugger
       return (
         <li 
         className="message-wrapper"
         key={idx}>
         <div className="the-whole-message">
-          <img src={this.props.users[message.author_id].img_url} />
+          <img src={this.props.users[message.author_id].img_url }/>
           <div className="message">
             <span className="message-user-info">
             <strong>{this.props.users[message.author_id].username}</strong>
@@ -76,7 +78,7 @@ class ChatRoom extends React.Component {
     return (
       <div className="chatroom-container">
         <div className="message-list-wrapper">
-            <div className="message-list">{messageList}</div>
+            <div className="message-list">{this.props.users? messageList : {}}</div>
           <div id="bottom" />
         </div>
           <MessageForm 
