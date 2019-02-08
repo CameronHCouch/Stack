@@ -12,7 +12,7 @@
 #
 
 class Channel < ApplicationRecord
-  validates :name, presence: true
+  validates :name, length: { maximum: 21 }, presence: true
 
   belongs_to :workspace,
     foreign_key: :workspace_id,

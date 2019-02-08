@@ -12,7 +12,7 @@ class ChannelForm extends React.Component {
   errors() {
     if (this.props.errors.channel) {
       return (this.props.errors.channel.map((er, idx) => {
-        return <li className="error" key={idx}>{er}</li>
+        return <li className="error channel-error" key={idx}>{er}</li>
       })
       )
     }

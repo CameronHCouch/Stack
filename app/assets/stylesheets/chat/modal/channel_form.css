@@ -153,3 +153,7 @@ div.visible{
   display: flex;
   flex-direction: column;
 }
+
+li.channel-error{
+  margin-bottom: 5px;
+}
