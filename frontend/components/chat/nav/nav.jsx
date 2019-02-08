@@ -13,6 +13,17 @@ class Nav extends React.Component {
     this.setState({ sidebarVisible: !this.state.sidebarVisible })
   }
 
+  subscribedUsers(){
+    if (this.props.selectedChannel) {
+      let userCount = 0;
+      this.props.users.forEach((user) => {
+        if (user.channels.includes(this.props.selectedChannel.id))
+        userCount ++
+      })
+      return userCount;
+    }
+  }
+
   render() {
     return (
       <div className="chat-nav-bar">
@@ -20,7 +31,7 @@ class Nav extends React.Component {
           <div className="channel-info">
             <h1 className="channel-name-head">{this.props.selectedChannel.name}</h1>
             <div className="channel-description">
-              <span> <i className="fas fa-user"></i> {this.props.users.length} </span>
+              <span> <i className="fas fa-user"></i> {this.subscribedUsers()} </span>
               <span>{this.props.selectedChannel.description}</span>
             </div>
           </div>
