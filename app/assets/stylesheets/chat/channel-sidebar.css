@@ -2,10 +2,12 @@
   display: flex;
   background-color: #3f0e40;
   width: 220px;
+  min-width: 220px;
   height: 100vh;
   font-family: 'Lato', sans-serif;
   color: rgba(197,183,198,1);
   font-weight: 400;
+  overflow: hidden;
 }
 
 .chat-channel-sidebar-contents{
@@ -13,6 +15,7 @@
   flex-direction: column;
   width: 220px;
   justify-content: space-between;
+  overflow-y: auto;
 }
 
 .chat-workspace-header{
@@ -96,7 +99,6 @@ div.sidebar-list ul.channel-names a:hover{
 button.chat-signout{
   background-color: #f33d60;
   padding: 20px;
-  margin-bottom: 20px;
   text-align: center;
   color: white;
   opacity: 1;

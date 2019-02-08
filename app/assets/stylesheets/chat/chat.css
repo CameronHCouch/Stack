@@ -2,6 +2,7 @@ div.chatroom-wrapper{
   display: flex;
   flex-direction: row;
   height: 100vh;
+  overflow-y: hidden;
 }
 
 .nav-and-chat-wrapper{
@@ -16,7 +17,7 @@ div.chatroom-wrapper{
 }
 
 div.message-list-wrapper{
-  overflow-y:scroll;
+  overflow-y: auto;
   height: 85vh;
 }
 
