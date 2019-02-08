@@ -15,18 +15,20 @@ class MemberList extends React.Component {
 
   render(){
     let members = Object.values(this.props.members || {}).map((member) => {
-      return (
-        <li
-          className="user-info-wrapper"
-          key={ member.id }
-          >
-          {member.id === this.props.currentUser ? this.online() : this.offline() }
-          <img className="small-user-icon" src={ member.img_url } />
-          <div className="username">
-            <strong>{ member.username }</strong> { member.id === this.props.currentUser ? "(you)" : "" }
-          </div>
-        </li>
-      )
+      if (member.channels.includes(this.props.selectedChannel.id)) {
+        return (
+          <li
+            className="user-info-wrapper"
+            key={ member.id }
+            >
+            {member.id === this.props.currentUser ? this.online() : this.offline() }
+            <img className="small-user-icon" src={ member.img_url } />
+            <div className="username">
+              <strong>{ member.username }</strong> { member.id === this.props.currentUser ? "(you)" : "" }
+            </div>
+          </li>
+        )
+      }
     });
 
     return (

@@ -18,6 +18,17 @@ class InfoSidebar extends React.Component {
     this.setState({ visibleDescription: !this.state.visibleDescription })
   }
 
+  subscribedUsers() {
+    if (this.props.selectedChannel) {
+      let userCount = 0;
+      this.props.members.forEach((user) => {
+        if (user.channels.includes(this.props.selectedChannel.id))
+          userCount++
+      })
+      return userCount;
+    }
+  }
+
   render(){
     return (
       <div className="info-sidebar">
@@ -53,7 +64,7 @@ class InfoSidebar extends React.Component {
           <div className="user-list-header info-header">
             <h2> 
               <i className="fas fa-user info-sidebar"></i> 
-              <span className="info-plaintext">{this.props.members.length} Members</span>
+              <span className="info-plaintext">{this.subscribedUsers()} Members</span>
             </h2>
             <span onClick={this.toggleVisibleMembers.bind(this)} 
               className={`arrow ${this.state.visibleMembers ? "rotate" : ""}`}
