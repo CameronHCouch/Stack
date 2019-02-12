@@ -15,10 +15,8 @@ class ChatRoom extends React.Component {
     ));
 
     if (this.subscription){
-      debugger
       this.subscription.load({ channelId })
     } else {
-      debugger
       this.subscription = App.cable.subscriptions.create(
         { channel: "ChatChannel", channelId },
         {
@@ -56,7 +54,6 @@ class ChatRoom extends React.Component {
 
   render() {
     const messageList = this.state.messages.map((message, idx) => {
-      debugger
       return (
         <li 
         className="message-wrapper"
