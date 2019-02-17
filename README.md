@@ -3,7 +3,7 @@
 
 ![Stack Logo](https://s3.us-east-2.amazonaws.com/couchstack/logo_text_recolor.png)
 
-Visit [Stack](https://couch-stack.herokuapp.com/#/)!
+Visit [Stack](https://www.stack-app.com/)!
 
 ## About Stack
 Stack is a Slack clone, a workplace messaging app that brings teams together. On Stack, team members can instantly message one another, keeping everyone on the same page. Creating new channels and private conversations keeps chat separated by topic, allowing everyone to focus on what's most important to them.
