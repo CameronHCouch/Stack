@@ -31,7 +31,7 @@ class HeaderNav extends React.Component {
         </Link>
         <nav>
           <ul className="nav-links">
-            <li><Link to="https://www.cameroncouch.me">Why Cameron?</Link></li>
+            <li><a href="https://www.cameroncouch.me" target="_blank">Why Cameron?</a></li>
             <li><a href="https://www.linkedin.com/in/cameroncouch/" target="_blank">LinkedIn</a></li>
             <li><a href="https://github.com/CameronHCouch/" target="_blank">GitHub</a></li>
           </ul>
