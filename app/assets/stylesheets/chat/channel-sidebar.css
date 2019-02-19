@@ -28,6 +28,11 @@
   cursor: pointer;
 }
 
+.fa-chevron-down{
+  font-size: 0.55em;
+  align-self: top;
+}
+
 div.header-user{
   display: flex;
   align-items: center;
@@ -81,6 +86,22 @@ div.sidebar-list ul.channel-names{
 h2.sidebar-list-title:hover{
   color: white;
   cursor: pointer;
+}
+
+.direct-messages-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+span.direct-messages-title:hover{
+  color: white;
+  cursor: pointer;
+}
+
+.fa-times-circle.dm{
+  margin-bottom: 6px;
+  margin-right: 13px;
 }
 
 div.sidebar-list ul.channel-names li{

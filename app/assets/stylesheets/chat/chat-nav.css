@@ -16,6 +16,7 @@
 .channel-info{
   display: flex;
   flex-direction: column;
+  min-width: 398px;
 }
 
 h1.channel-name-head{
@@ -38,6 +39,7 @@ h1.channel-name-head{
 
 .chat-nav-icons{
   margin-top: 10px;
+  min-width: 73px;
 }
 .chat-nav-icon{
   cursor: pointer;

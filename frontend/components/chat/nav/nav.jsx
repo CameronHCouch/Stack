@@ -36,6 +36,27 @@ class Nav extends React.Component {
             </div>
           </div>
         <div className="chat-nav-icons">
+            <a href="https://github.com/CameronHCouch" target="_blank">
+              <span
+                className="chat-nav-icon"
+                >
+              <i className="fab fa-github fa-lg"></i>
+              </span>
+            </a>
+            <a href="https://www.linkedin.com/in/cameroncouch/" target="_blank">
+              <span
+                className="chat-nav-icon"
+                >
+              <i className="fab fa-linkedin fa-lg"></i>
+              </span>
+            </a>
+            <a href="https://angel.co/cameronhcouch" target="_blank">
+              <span
+                className="chat-nav-icon"
+                >
+                <i className="fab fa-angellist fa-lg"></i>
+              </span>
+            </a>
           <span 
             className="chat-nav-icon"
             onClick={this.handleClick.bind(this)}
