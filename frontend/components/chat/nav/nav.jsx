@@ -4,7 +4,8 @@ class Nav extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      sidebarVisible: this.props.sidebarVisible
+      sidebarVisible: this.props.sidebarVisible,
+      userCount: 0,
     }
   }
 
