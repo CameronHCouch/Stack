@@ -16,7 +16,7 @@
 .channel-info{
   display: flex;
   flex-direction: column;
-  min-width: 398px;
+  /* min-width: 398px; */
 }
 
 h1.channel-name-head{
