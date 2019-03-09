@@ -12,6 +12,7 @@ class Api::WorkspacesController < ApplicationController
     @workspace.admin_id = current_user.id
 
     if @workspace.save
+      # TODO: Error handling for credentials
       Subscription.create!(user_id: current_user.id, subscribable: @workspace)
 
       general_chat = Channel.create!(name: '#general', description: 'Company-wide announcements and work-based matters', workspace_id: @workspace.id)
@@ -24,6 +25,7 @@ class Api::WorkspacesController < ApplicationController
   end
 
   def update
+    # Build form to Create and Edit workspaces?
   end
 
   private

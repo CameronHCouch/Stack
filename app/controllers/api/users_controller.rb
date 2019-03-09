@@ -8,6 +8,7 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       login(@user)
+      # TODO: Error handling for credentials
       Subscription.create!(user_id: current_user.id, subscribable: Workspace.first)
       Subscription.create!(user_id: current_user.id, subscribable: Workspace.first.channels[0])
       render :show

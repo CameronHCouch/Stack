@@ -14,6 +14,7 @@ class Api::ChannelsController < ApplicationController
     @channel.workspace = current_user.workspaces.first
 
     if @channel.save
+      # TODO: error handling for these new subscriptions
       Subscription.create!(user_id: current_user.id, subscribable: @channel)
       if params[:channel][:member_list].length
         invites = params[:channel][:member_list].split(" ")
@@ -34,6 +35,7 @@ class Api::ChannelsController < ApplicationController
       if params[:channel]["member_list"].length
         invites = params[:channel]["member_list"].split(" ")
         invites.each do |username|
+          # TODO: Error handling for subscriptions
           invited_user = User.find_by(username: username)
           Subscription.create!(user_id: invited_user.id, subscribable: @channel)
         end
