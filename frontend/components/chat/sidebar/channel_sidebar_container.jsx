@@ -3,6 +3,7 @@ import { logout } from '../../../actions/session_actions';
 import ChannelSidebar from './channel_sidebar';
 import { requestChannels } from '../../../actions/channel_actions';
 import { createChannelModal } from '../../../actions/modal_actions';
+import { displaySignoutDropdown } from '../../../actions/ui_actions';
 
 const msp = (state) => {
   return {
@@ -15,7 +16,8 @@ const mdp = dispatch => {
   return {
     logout: () => dispatch(logout()),
     requestChannels: () => dispatch(requestChannels()),
-    createChannelModal: () => dispatch(createChannelModal())
+    createChannelModal: () => dispatch(createChannelModal()),
+    displaySignoutDropdown: () => dispatch(displaySignoutDropdown()),
   };
 };
 

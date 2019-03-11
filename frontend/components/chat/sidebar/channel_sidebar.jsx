@@ -1,6 +1,5 @@
 import React from 'react';
 import ChannelList from './channel_list_container';
-import { Link, NavLink } from 'react-router-dom';
 
 class ChannelSidebar extends React.Component {
   constructor(props) {
@@ -17,7 +16,7 @@ class ChannelSidebar extends React.Component {
         <div className="chat-channel-sidebar-contents">
         <div className="not-signout-button">
             <header className="chat-workspace-header">
-              <h1 className="chat-workspace-name"><Link to="/">{this.props.workspace && this.props.workspace.name}  <i className="fas fa-chevron-down"></i></Link></h1>
+              <h1 className="chat-workspace-name" onClick={this.props.displaySignoutDropdown}>{this.props.workspace && this.props.workspace.name}  <i className="fas fa-chevron-down"></i></h1>
               <div className="header-user">
                 <span className="self"><i className="fas fa-circle"></i></span><p className="channel-side-username">{this.props.currentUser.username}</p>
               </div>

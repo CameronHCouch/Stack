@@ -8,7 +8,7 @@ class Nav extends React.Component {
       userCount: 0,
     }
   }
-
+// messy and doesn't work. how to fix?
   handleClick(){
     this.state.sidebarVisible ? this.props.hideInfoSidebar() : this.props.displayInfoSidebar();
     this.setState({ sidebarVisible: !this.state.sidebarVisible })

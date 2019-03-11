@@ -3,6 +3,8 @@ export const SELECT_CHANNEL = "SELECT_CHANNEL";
 export const SELECT_WORKSPACE = "SELECT_WORKSPACE";
 export const DISPLAY_INFO_SIDEBAR = "DISPLAY_INFO_SIDEBAR";
 export const HIDE_INFO_SIDEBAR = "HIDE_INFO_SIDEBAR";
+export const HIDE_SIGNOUT_DROPDOWN = "HIDE_SIGNOUT_DROPDOWN";
+export const DISPLAY_SIGNOUT_DROPDOWN = "DISPLAY_SIGNOUT_DROPDOWN";
 
 export const receiveEmail = (email) => {
   return {
@@ -32,4 +34,12 @@ export const displayInfoSidebar = () => ({
 
 export const hideInfoSidebar = () => ({
   type: HIDE_INFO_SIDEBAR,
+});
+
+export const displaySignoutDropdown = () => ({
+  type: DISPLAY_SIGNOUT_DROPDOWN,
+})
+
+export const hideSignoutDropdown = () => ({
+  type: HIDE_SIGNOUT_DROPDOWN,
 });
