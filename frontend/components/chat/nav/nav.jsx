@@ -4,14 +4,12 @@ class Nav extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      sidebarVisible: this.props.sidebarVisible,
       userCount: 0,
     }
   }
 // messy and doesn't work. how to fix?
   handleClick(){
-    this.state.sidebarVisible ? this.props.hideInfoSidebar() : this.props.displayInfoSidebar();
-    this.setState({ sidebarVisible: !this.state.sidebarVisible })
+    this.props.sidebar === "DISPLAY_INFO_SIDEBAR" ? this.props.hideInfoSidebar() : this.props.displayInfoSidebar();
   }
 
   subscribedUsers(){
