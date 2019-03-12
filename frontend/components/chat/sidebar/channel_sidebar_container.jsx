@@ -8,7 +8,7 @@ import { displaySignoutDropdown,
 
 const msp = (state) => {
   return {
-    currentUser: state.entities.users[state.session.currentUser],
+    currentUser: state.session.currentUser,
     workspace: Object.values(state.entities.workspaces)[0],
     status: state.ui.dropdown,
   };

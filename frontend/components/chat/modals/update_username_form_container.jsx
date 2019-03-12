@@ -3,7 +3,7 @@ import ChatChannelSidebar from '../sidebar/channel_sidebar_container';
 
 const msp = (state) => {
   return {
-    currentUser: state.entities.users[state.session.currentUser],
+    currentUser: state.session.currentUser,
   }
 }
 

@@ -43,7 +43,6 @@ class ChannelSidebar extends React.Component {
               <ChannelList channelType={true} />
             </div>
           </div>
-          <button className="chat-signout" onClick={() => this.props.logout()}>Sign Out</button>
         </div>
       </div>
     )

@@ -6,6 +6,7 @@ import { logout } from '../../../actions/session_actions';
 const msp = (state) => {
   return {
     currentUser: state.session.currentUser,
+    workspace: Object.values(state.entities.workspaces)[0],
   };
 };
 

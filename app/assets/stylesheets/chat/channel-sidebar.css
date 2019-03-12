@@ -117,18 +117,6 @@ div.sidebar-list ul.channel-names a:hover{
   height: 26px;
 }
 
-button.chat-signout{
-  background-color: #f33d60;
-  padding: 20px;
-  text-align: center;
-  color: white;
-  opacity: 1;
-}
-
-button.chat-signout:hover{
-  background-color: #a3062b;
-}
-
 .sidebar-add-channel{
   font-size: 16px;
   height: 26px;
@@ -174,4 +162,38 @@ div.delete-channel-button:hover{
   opacity: 1;
   margin-right: 5px;
   color: white;
+}
+
+button.chat-signout{
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  color: #1d1c1d;
+  width: 300px;
+  padding: 20px;
+}
+
+button.chat-signout:hover{
+  background-color: #0662a3;
+  color: white;
+}
+
+div.signout-dropdown{
+  position: absolute;
+  top: 55px;
+  left: 12px;
+  background-color: white;
+  width: 300px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.08), 0 4px 12px 0 rgba(0,0,0,.12);
+}
+
+.signout-dropdown img{
+  width: 36px;
+  height: 36px;
+  border-radius: 3px;
+}
+
+.current-user-info{
+  padding: 25px;
+  display: flex;
 }

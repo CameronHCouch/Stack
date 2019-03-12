@@ -4,7 +4,7 @@ import Chatroom from './chatroom';
 
 const msp = (state) => {
   return {
-    currentUser: state.session.currentUser,
+    currentUser: state.session.currentUser.id,
     selectedChannel: state.entities.channels[state.ui.sidebar.selectedId] || {},
     users: state.entities.users,
   };

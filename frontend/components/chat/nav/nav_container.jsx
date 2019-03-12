@@ -5,7 +5,7 @@ import { displayInfoSidebar, hideInfoSidebar } from '../../../actions/ui_actions
 
 const msp = (state) => {
   return {
-    currentUser: state.session.currentUser,
+    currentUser: state.session.currentUser.id,
     selectedChannel: state.entities.channels[state.ui.sidebar.selectedId] || {},
     users: Object.values(state.entities.users),
     sidebarVisible: false,

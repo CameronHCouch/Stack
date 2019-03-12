@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 
 const msp = (state) => {
   return {
-    currentUser: state.session.currentUser,
+    currentUser: state.session.currentUser.id,
   };
 };
 
