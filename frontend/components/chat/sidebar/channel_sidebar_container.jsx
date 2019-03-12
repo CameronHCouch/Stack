@@ -2,7 +2,8 @@ import { connect } from 'react-redux';
 import { logout } from '../../../actions/session_actions';
 import ChannelSidebar from './channel_sidebar';
 import { requestChannels } from '../../../actions/channel_actions';
-import { createChannelModal } from '../../../actions/modal_actions';
+import { createChannelModal,
+         dmInviteModal } from '../../../actions/modal_actions';
 import { displaySignoutDropdown,
          hideSignoutDropdown, } from '../../../actions/ui_actions';
 
@@ -19,6 +20,7 @@ const mdp = dispatch => {
     logout: () => dispatch(logout()),
     requestChannels: () => dispatch(requestChannels()),
     createChannelModal: () => dispatch(createChannelModal()),
+    dmInviteModal: () => dispatch(dmInviteModal()),
     displaySignoutDropdown: () => dispatch(displaySignoutDropdown()),
     hideSignoutDropdown: () => dispatch(hideSignoutDropdown()),
   };

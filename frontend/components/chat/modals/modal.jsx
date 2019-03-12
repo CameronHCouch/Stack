@@ -4,11 +4,13 @@ import { connect } from 'react-redux';
 import CreateChannelForm from './create_channel_form_container';
 import EditChannelForm from './edit_channel_form_container';
 import UpdateUsernameForm from './update_username_form_container';
+import DMInviteForm from './dm_invite_form_container';
 
 import {
   CREATE_CHANNEL_MODAL,
   EDIT_CHANNEL_MODAL,
   UPDATE_USERNAME_MODAL,
+  DM_INVITE_MODAL,
   closeModal
 } from '../../../actions/modal_actions';
 
@@ -37,6 +39,13 @@ const Modal = (props) => {
           <EditChannelForm />
         </div>
       );
+    case DM_INVITE_MODAL:
+    return(
+      <div className='modal'>
+        <button onClick={props.closeModal} className="modal-close-x">&#10005;</button>
+        <DMInviteForm />
+      </div>
+    )
     case UPDATE_USERNAME_MODAL:
       return (
         <div className='modal'>

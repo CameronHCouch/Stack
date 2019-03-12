@@ -143,6 +143,10 @@ div.whole-list-item{
   align-items: center;
 }
 
+div.whole-list-item a{
+  flex: 1;
+}
+
 div.whole-list-item:hover{
   background-color: rgb(37,3,38);
   cursor: pointer;

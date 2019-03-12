@@ -37,7 +37,7 @@ class ChannelSidebar extends React.Component {
             </div>
               
             <div className="sidebar-list">
-              <div onClick={this.props.createChannelModal}>
+              <div onClick={this.props.dmInviteModal}>
                 <span className="direct-messages-title"><h2 className="sidebar-list-title">Direct Messages </h2> <i className="far fa-times-circle dm" data-fa-transform="rotate-45"></i></span>
               </div>
               <ChannelList channelType={true} />

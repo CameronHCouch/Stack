@@ -1,0 +1,97 @@
+import React from 'react';
+import MemberListContainer from '../member_list/member_list_container';
+
+class DMInviteForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = props.channel;
+    this.update = this.update.bind(this);
+    this.visible = false;
+  };
+
+  errors() {
+    if (this.props.errors.channel) {
+      return (this.props.errors.channel.map((er, idx) => {
+        return <li className="error channel-error" key={idx}>{er}</li>
+      })
+      )
+    }
+  }
+
+  componentDidMount() {
+    this.props.clearErrors();
+    if (this.props.workspace) {
+      this.setState({ workspace_id: this.props.workspace_id });
+    }
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.createChannel(this.state)
+  }
+
+  update(field) {
+    return (e) => this.setState({ [field]: e.currentTarget.value })
+  }
+
+  toggleDM() {
+    this.setState({ is_dm: (!this.state.is_dm) })
+  }
+
+  valid_submit() {
+    if (this.state.member_list && this.state.member_list.length > 1) {
+      return "valid"
+    } else {
+      return ""
+    }
+  }
+
+  toggleVisibility() {
+    this.visible = !this.visible
+  }
+
+  showMemberList() {
+    if (this.visible == false) {
+      return "invisible"
+    } else {
+      return "visible"
+    }
+  }
+
+  render() {
+    return (
+      <div className="channel-form-modal">
+        <section className="channel-form-header">
+          <h1 className="channel-form-header">Direct Messages</h1>
+        </section>
+        <ul>
+          {this.errors()}
+        </ul>
+        <form className="channel-form" onSubmit={this.handleSubmit.bind(this)}>
+
+          <label id="member_list">
+            <input
+              type='text'
+              htmlFor="member_list"
+              className="member_list"
+              value={this.state.member_list}
+              onChange={this.update('member_list')}
+            />
+          </label>
+          {/* <div className={this.showMemberList()}>
+            <MemberListContainer members={this.props.users} />
+          </div> */}
+          <input
+            type="submit"
+            value="Go"
+            className={`create-channel ${this.valid_submit()}`}
+          >
+          </input>
+        </form>
+        <br />
+      </div>
+    )
+  }
+}
+
+export default DMInviteForm;
