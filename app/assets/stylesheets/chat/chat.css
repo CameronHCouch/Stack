@@ -8,12 +8,14 @@ div.chatroom-wrapper{
 .nav-and-chat-wrapper{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 100%;
 }
 
 .chat-and-info-wrapper{
   display: flex;
   justify-content: space-between;
+  flex: 1;
 }
 
 div.message-list-wrapper{

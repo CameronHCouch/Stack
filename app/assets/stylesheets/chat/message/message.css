@@ -22,7 +22,7 @@
 
 input.message-form[type=text]{
   border: 2px solid rgba(134, 134, 134, 0.7);
-  margin: 0px 20px 0px 20px;
+  margin: 0px 20px 20px 20px;
   height: 40px;
   border-radius: 6px;
   font-size:15px;
