@@ -38,9 +38,9 @@ class InfoSidebar extends React.Component {
         </div>
 
         <div className="info-section-wrapper">
-          <div className="channel-details-header info-header">
+          <div className="channel-details-header info-header" onClick={this.toggleVisibleDescription.bind(this)}>
             <h2><i className="fas fa-info-circle info-sidebar"></i><span className="info-plaintext">Channel Details</span></h2>
-            <span onClick={this.toggleVisibleDescription.bind(this)} 
+            <span 
               className={`arrow ${this.state.visibleDescription ? "rotate" : ""}`}
               >
               <i className='fas fa-caret-right'></i>
@@ -61,12 +61,12 @@ class InfoSidebar extends React.Component {
         </div>
 
         <div className="info-section-wrapper">
-          <div className="user-list-header info-header">
+          <div className="user-list-header info-header" onClick={this.toggleVisibleMembers.bind(this)} >
             <h2> 
               <i className="fas fa-user info-sidebar"></i> 
               <span className="info-plaintext">{this.subscribedUsers()} Members</span>
             </h2>
-            <span onClick={this.toggleVisibleMembers.bind(this)} 
+            <span
               className={`arrow ${this.state.visibleMembers ? "rotate" : ""}`}
               >
               <i className='fas fa-caret-right'></i>

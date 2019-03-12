@@ -47,6 +47,7 @@ div.info-header{
   font-size: 18px;
   font-weight: 400;
   width: 100%;
+  cursor: pointer;
 }
 
 div.info-section-wrapper{
