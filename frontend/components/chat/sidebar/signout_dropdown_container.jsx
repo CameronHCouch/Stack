@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SignoutDropdown from './signout_dropdown';
-import { hideSignoutDropdown } from '../../../actions/ui_actions';
+import { displaySignoutDropdown } from '../../../actions/ui_actions';
 import { logout } from '../../../actions/session_actions';
 
 const msp = (state) => {
@@ -12,7 +12,7 @@ const msp = (state) => {
 const mdp = dispatch => {
   return {
     logout: () => dispatch(logout()),
-    hideSignoutDropdown: () => dispatch(hideSignoutDropdown()),
+    displaySignoutDropdown: () => dispatch(displaySignoutDropdown()),
   };
 };
 
