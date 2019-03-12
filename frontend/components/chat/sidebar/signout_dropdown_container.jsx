@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import SignoutDropdown from './signout_dropdown';
 import { hideSignoutDropdown } from '../../../actions/ui_actions';
+import { logout } from '../../../actions/session_actions';
 
 const msp = (state) => {
   return {

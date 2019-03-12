@@ -8,7 +8,7 @@ class SignoutDropdown extends React.Component {
   render() {
     return (
       <div className="signout-dropdown">
-          <button className="chat-signout" onClick={() => this.props.logout()}>Sign Out</button>
+        <button className="chat-signout" onClick={() => this.props.logout()}>Sign Out</button>
       </div>
     )
   }
