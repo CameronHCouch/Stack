@@ -31,11 +31,10 @@ class DMInviteForm extends React.Component {
   }
 
   update(field) {
-    return (e) => this.setState({ [field]: e.currentTarget.value })
-  }
-
-  toggleDM() {
-    this.setState({ is_dm: (!this.state.is_dm) })
+    return (e) => {
+      this.setState({ name: e.currentTarget.value });
+      this.setState({ [field]: e.currentTarget.value });
+    }
   }
 
   valid_submit() {
