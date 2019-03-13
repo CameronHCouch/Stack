@@ -27,14 +27,15 @@ class DMInviteForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.setState({ member_list: this.state.member_list + ` ${this.props.currentUser}`,
-                    name: this.state.name + ` ${this.props.currentUser}` })
+    this.setState({ member_list: this.state.member_list + ' ' + this.props.currentUser,
+                    name: this.state.name.slice(0,21) })
     this.props.createChannel(this.state)
   }
 
   update(field) {
     return (e) => {
-      this.setState({ [field]: e.currentTarget.value, name: e.currentTarget.value });
+      this.setState({ [field]: e.currentTarget.value, 
+                      name: e.currentTarget.value });
     }
   }
 
@@ -74,7 +75,7 @@ class DMInviteForm extends React.Component {
               type='text'
               htmlFor="member_list"
               className="member_list"
-              value={this.state.member_list}
+              // value={this.state.member_list}
               onChange={this.update('member_list')}
             />
           </label>
