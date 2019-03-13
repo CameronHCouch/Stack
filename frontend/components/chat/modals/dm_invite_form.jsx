@@ -67,7 +67,7 @@ class DMInviteForm extends React.Component {
         <ul>
           {this.errors()}
         </ul>
-        <form className="channel-form" onSubmit={this.handleSubmit.bind(this)}>
+        <form className="dm-form" onSubmit={this.handleSubmit.bind(this)}>
 
           <label id="member_list">
             <input
@@ -81,12 +81,12 @@ class DMInviteForm extends React.Component {
           {/* <div className={this.showMemberList()}>
             <MemberListContainer members={this.props.users} />
           </div> */}
-          <input
-            type="submit"
-            value="Go"
-            className={`create-channel ${this.valid_submit()}`}
-          >
-          </input>
+            <input
+              type="submit"
+              value="Go"
+              className={`dm-invite ${this.valid_submit()}`}
+            >
+            </input>
         </form>
         <br />
       </div>
