@@ -15,9 +15,10 @@ const msp = (state) => {
       description: '',
       workspace_id: 2,
       is_dm: true,
-      member_list: `${state.session.currentUser.username}`,
+      member_list: '',
     },
     users: state.entities.users,
+    currentUser: state.session.currentUser.username,
   };
 };
 
