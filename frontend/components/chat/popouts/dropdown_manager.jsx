@@ -2,10 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import SignoutDropdownContainer from '../sidebar/signout_dropdown_container';
+import DMInvitePopupContainer from './dm_invite_popup_container';
 
 import {
   DISPLAY_SIGNOUT_DROPDOWN,
-  hideSignoutDropdown,
+  DISPLAY_DM_INVITE_POPUP,
 } from '../../../actions/ui_actions';
 
 const msp = state => (
@@ -14,6 +15,7 @@ const msp = state => (
 
 const mdp = dispatch => ({
   hideSignoutDropdown: () => dispatch(hideSignoutDropdown()),
+
 });
 
 const DropdownManager = (props) => {
@@ -21,7 +23,13 @@ const DropdownManager = (props) => {
     case DISPLAY_SIGNOUT_DROPDOWN:
       return (
         <div className={`dropdown`}>
-          <SignoutDropdownContainer hideSignoutDropdown={props.hideSignoutDropdown} />
+          <SignoutDropdownContainer />
+        </div>
+      );
+    case DISPLAY_DM_INVITE_POPUP:
+      return (
+        <div className={'dm-invite-popup'}>
+          <DMInvitePopupContainer />
         </div>
       );
     default:

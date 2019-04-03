@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
-import { requestUsers } from '../../actions/user_actions';
 import Chatroom from './chatroom';
+import { requestUsers } from '../../actions/user_actions';
+import { displayDMInvitePopup } from '../../actions/'
 
 const msp = (state) => {
   return {
@@ -13,6 +14,7 @@ const msp = (state) => {
 const mdp = dispatch => {
   return {
     requestUsers: (channelId) => dispatch(requestUsers(channelId)),
+    displayDMInvitePopup: () => dispatch(displayDMInvitePopup()),
   };
 };
 

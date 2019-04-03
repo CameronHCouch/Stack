@@ -27,9 +27,9 @@ class DMInviteForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.setState({ member_list: this.state.member_list + ' ' + this.props.currentUser,
-                    name: this.state.name.slice(0,21) })
-    this.props.createChannel(this.state)
+    this.setState({ member_list: this.state.member_list,
+                    name: this.state.name.slice(0,21) });
+    this.props.createChannel(this.state);
   }
 
   update(field) {
@@ -41,21 +41,21 @@ class DMInviteForm extends React.Component {
 
   valid_submit() {
     if (this.state.member_list && this.state.member_list.length > 1) {
-      return "valid"
+      return "valid";
     } else {
-      return ""
+      return "";
     }
   }
 
   toggleVisibility() {
-    this.visible = !this.visible
+    this.visible = !this.visible;
   }
 
   showMemberList() {
     if (this.visible == false) {
-      return "invisible"
+      return "invisible";
     } else {
-      return "visible"
+      return "visible";
     }
   }
 

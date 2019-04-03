@@ -59,7 +59,7 @@ class ChatRoom extends React.Component {
         className="message-wrapper"
         key={idx}>
         <div className="the-whole-message">
-          <img src={this.props.users[message.author_id].img_url }/>
+          <img src={this.props.users[message.author_id].img_url} onClick={this.props.displayDMInvitePopup()} />
           <div className="message">
             <span className="message-user-info">
             <strong>{this.props.users[message.author_id].username}</strong>
