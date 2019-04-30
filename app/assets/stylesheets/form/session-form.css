@@ -95,7 +95,7 @@
   font-weight: 700;
   margin-bottom: 5px;
   border-radius: 4px;
-  padding: 13px 0px 37px 0px;
+  padding: 20px 0px;
   font-size: 20px;
   display: flex;
   justify-content: center;
@@ -126,7 +126,7 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  padding: 15px 0px 35px 0px;
+  padding: 20px 0px;
   font-weight: 700;
 }
 
@@ -143,7 +143,7 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  padding: 12.5px 0px;
+  padding: 20px 0px;
   font-weight: 700;
 }
 
