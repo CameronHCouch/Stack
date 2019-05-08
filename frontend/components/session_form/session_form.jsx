@@ -84,8 +84,8 @@ class SessionForm extends React.Component {
     return (
       <div className={`session-form-modal`}>
         <section className="login-form-header">
-          <h2 className="sign-in-text">Sign {(this.props.match.path === "/signup") ? "up for" : "in to"} App Academy</h2>
-          <p className="workspace-url">app-academy.stack.com</p>
+          <h2 className="sign-in-text">Sign {(this.props.match.path === "/signup") ? "up for" : "in to"} Choco Factory</h2>
+          <p className="workspace-url">choco-factory.stack.com</p>
     
           <p className="left-aligned">Enter your <strong>email address</strong> and <strong>password</strong>.</p>
         </section>
