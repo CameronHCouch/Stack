@@ -1,7 +1,7 @@
 # Stack
 
 
-![Stack Logo](https://s3.us-east-2.amazonaws.com/couchstack/logo_text_recolor.png)
+![Stack Splash Page](https://s3.us-east-2.amazonaws.com/couchstack/splash_screenshot.png)
 
 Visit [Stack](https://www.stack-app.com/)!
 
@@ -11,7 +11,6 @@ Stack is a Slack clone, a workplace messaging app that brings teams together. On
 ### Technologies
 Stack was created using *React-Redux* for the frontend and *Rails* for backend. Messages are sent and received in real-time, using *Websockets* through Rails' built-in *Action Cable* feature.
 
-![Stack Splash Page](https://s3.us-east-2.amazonaws.com/couchstack/splash_screenshot.png)
 
 ## Features
 
