@@ -1,0 +1,1077 @@
+.chat-channel-sidebar{
+  display: flex;
+  background-color: #3f0e40;
+  width: 220px;
+  min-width: 220px;
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+  color: rgba(197,183,198,1);
+  font-weight: 400;
+  overflow: hidden;
+}
+
+.chat-channel-sidebar-contents{
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+.chat-workspace-header{
+  height: 61px;
+  margin-bottom: -1px;
+}
+
+.chat-workspace-header:hover{
+  background-color: rgb(37,3,38);
+  cursor: pointer;
+}
+
+.fa-chevron-down{
+  font-size: 0.55em;
+  align-self: top;
+}
+
+div.header-user{
+  display: flex;
+  align-items: center;
+}
+
+p.channel-side-username{
+  margin-left: 5px;
+}
+
+header h1.chat-workspace-name{
+  font-size: 18px;
+  font-weight: 900;
+  color: white;
+}
+
+span.online{
+  color: #10af79;
+  font-size: 0.5rem;
+  margin: 4px 4.5px 0 0;
+}
+
+span.self{
+  color: #10af79;
+  font-size: 0.5rem;
+}
+
+span.offline{
+  font-size: 0.5rem;
+  margin: 4.5px 4.5px 0 0;
+}
+
+.channel-side-username{
+  font-size: .875rem;
+  color: #ab9ba9;
+  margin-top: 2px;
+}
+
+h2.sidebar-list-title{
+  font-size: 16px;
+  height: 26px;
+  padding: 0 15px 0 12px;
+  margin-top: 30px;
+}
+
+div.sidebar-list ul.channel-names{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h2.sidebar-list-title:hover{
+  color: white;
+  cursor: pointer;
+}
+
+.direct-messages-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+span.direct-messages-title:hover{
+  color: white;
+  cursor: pointer;
+}
+
+.fa-times-circle.dm{
+  margin-bottom: 6px;
+  margin-right: 13px;
+}
+
+div.sidebar-list ul.channel-names li{
+  display: flex;
+  opacity: 0.64;
+  height: 26px;
+  padding: 2px 0 0 12px;
+}
+
+div.sidebar-list ul.channel-names a:hover{
+  background-color: rgb(37,3,38);
+  cursor: pointer;
+  height: 26px;
+}
+
+.sidebar-add-channel{
+  font-size: 16px;
+  height: 26px;
+  padding: 2px 15px 0 12px;
+  margin-top: 30px;
+}
+
+.sidebar-add-channel:hover{
+  background-color: rgb(37,3,38);
+  cursor: pointer;
+  padding-top: 2px;
+}
+
+div.sidebar-list ul.channel-names li.selected-channel,
+div.sidebar-list ul.channel-names div.whole-list-item.selected-channel{
+  background-color: #0662a3;
+  color: white;
+  opacity: 1;
+}
+
+div.whole-list-item{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+div.whole-list-item:hover{
+  background-color: rgb(37,3,38);
+  cursor: pointer;
+}
+
+div.whole-list-item:hover div.delete-channel-button{
+  background-color: transparent;
+  opacity: 0.64;
+}
+
+div.delete-channel-button{
+  opacity: 0;
+  margin-right: 5px;
+}
+
+div.delete-channel-button:hover{
+  opacity: 1;
+  margin-right: 5px;
+  color: white;
+}
+
+button.chat-signout{
+  font-family: 'Lato', sans-serif;
+  color: #1d1c1d;
+  width: 300px;
+  padding: 20px;
+}
+
+button.chat-signout:hover{
+  background-color: #0662a3;
+  color: white;
+}
+
+div.signout-dropdown{
+  position: absolute;
+  top: 55px;
+  left: 12px;
+  background-color: white;
+  width: 300px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.08), 0 4px 12px 0 rgba(0,0,0,.12);
+}
+
+.signout-dropdown img{
+  width: 36px;
+  height: 36px;
+  border-radius: 3px;
+}
+
+.current-user-info{
+  padding: 25px 25px 15px 25px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(229,229,229);
+}
+
+.signout-dropdown strong{
+  font-weight: 700;
+}
+.chat-nav-bar{
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid rgb(229,229,229);
+  background-color: white;
+}
+
+.chat-nav-bar-contents{
+  font-family: 'Lato', sans-serif;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.channel-info{
+  display: flex;
+  flex-direction: column;
+  /* min-width: 398px; */
+}
+
+h1.channel-name-head{
+  font-size: 18px;
+  font-weight: 900;
+  margin-left: 21px;
+}
+
+.chatroom-header{
+  display: flex;
+  height: 60px;
+  width: 100%;
+}
+
+.channel-description{
+  font-size: 13px;
+  color: #616061;
+  margin-left: 21px;
+}
+
+.chat-nav-icons{
+  margin-top: 10px;
+  min-width: 177px;
+}
+.chat-nav-icon{
+  cursor: pointer;
+  margin-right: 15px;
+  color: #616061;
+}
+
+.chat-nav-icon:hover{
+  color: rgb(12,96,158);
+}
+div.chatroom-wrapper{
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.nav-and-chat-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.chat-and-info-wrapper{
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+div.message-list-wrapper{
+  overflow-y: auto;
+  height: 85vh;
+}
+
+div.chatroom-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+.popup{
+  border-left: 1px solid rgb(221, 221, 221);
+  margin-left: 20px;
+}
+
+h1.channel-info{
+  font-weight: 700;
+  font-size: 18px;
+  color: #1d1c1d;
+  margin-left: 10px;
+}
+
+div.channel-info-header{
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+div.info-sidebar{
+  font-family: 'Lato', sans-serif;
+  width: 315px;
+  display: block;
+}
+
+.info-close-x{
+  color: #616061;
+  margin-right: 16px;
+}
+
+.fa-user.info-sidebar{
+  color: #1d7859;
+}
+
+.fa-info-circle.info-sidebar{
+  color: #616061;
+}
+
+div.info-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 23px;
+  padding: 17px 10px;
+  font-size: 18px;
+  font-weight: 400;
+  width: 100%;
+  cursor: pointer;
+}
+
+div.info-section-wrapper{
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.fa-caret-right{
+  color: #616061;
+}
+
+.fa-caret-right:hover{
+  color: black;
+  cursor: pointer;
+}
+
+span.arrow.rotate{
+  -webkit-transform:rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.members-list-wrapper{
+  margin: 20px 0px;
+}
+
+.info-channel-description{
+  font-size: 15px;
+  color: #1d1c1d;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  margin: 10px 0px;
+}
+
+.info-channel-description-section{
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-channel-description-subtitle{
+  color: #616061;
+  font-weight: 900;
+  font-size: 12.8px;
+}
+
+.info-plaintext{
+  margin-left: 8px;
+}
+
+.hidden-info{
+  display: none;
+}
+.member-list{
+  font-size: 15px;
+  color: #1d1c1d;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info-wrapper{
+  display: flex;
+  height: 30px;
+  align-items: center;
+  padding-left: 15px;
+  border: 1px solid white;
+}
+
+.user-info-wrapper:hover{
+  background-color: rgb(233,245,250);
+  border: 1px solid rgb(207,233,244);
+}
+
+
+.small-user-icon{
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  border-radius: 3.2px;
+}
+
+.username{
+  margin-left: 8px;
+}
+
+.username strong{
+  font-weight: 700;
+}
+
+.user-online{
+  color: #1d7859;
+  font-size: 0.5rem;
+}
+
+.user-offline{
+  color: #616061;
+  font-size: 0.5rem;
+}
+.message-wrapper{
+  list-style: none;
+  margin: 20px 25px 10px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lato', sans-serif;
+}
+
+.message-time{
+  color: #616061;
+  font-size: 12px;
+}
+
+.message-user-info strong{
+  font-weight: 900;
+  color: #1d1c1d;
+}
+
+.hidden{
+  display: none;
+}
+
+input.message-form[type=text]{
+  border: 2px solid rgba(134, 134, 134, 0.7);
+  margin: 0px 20px 20px 20px;
+  height: 40px;
+  border-radius: 6px;
+  font-size:15px;
+  width: 95%;
+}
+
+.the-whole-message{
+  display: flex;
+}
+
+.the-whole-message img{
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 3px;
+}
+
+.message{
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+div.channel-form-modal{
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 640px;
+  height: 526px;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
+
+h1.channel-form-header{
+  color: #1d1c1d;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.channel-form-description{
+  font-size: .9rem;
+  line-height: 1.25rem;
+  color: #616061;
+  margin: 16px 0px;
+}
+
+.channel-form-header{
+  width: 100%;
+}
+
+label strong{
+  font-weight: 700;
+}
+
+.channel-form-input-description{
+  color: #616061;
+  font-size: .8rem;
+  margin-top: .25rem;
+  margin-bottom: 24px;
+}
+
+div.channel-form-modal button{
+  border-radius: 1rem;
+  width: 94px;
+  font-size: .9rem;
+  font-weight: 700;
+  text-align: center;
+  transition: 70ms ease-out;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  height: 27px;
+  line-height: 23px;
+  float: left;
+  margin-bottom: 16px;
+}
+
+form.channel-form input[type="text"]{
+  margin: 0;
+  padding: 11px 12px;
+}
+
+
+div.channel-form-modal button{
+  display: flex;
+  transition: 70ms ease-out;
+  align-content: flex-start;
+  justify-content: center;
+}
+
+div.channel-form-modal button.Public{
+  background-color: #007a5a;
+  color: white;
+}
+
+button.Private{
+  background-color: rgb(232, 145, 45);
+  color: white;
+  flex-direction: row-reverse;
+}
+
+span.dm-toggle-description{
+  display: inline-block;
+  color: #1d1c1d;
+  margin: 4px 0px 0px 8px;
+}
+
+/* span.white-toggle-circle{
+    display: inline-block;
+    padding: 0;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: white;
+    border-radius:50px;
+    position: relative;
+    top: -3px;
+    height: 24px;
+    width: 24px;
+} */
+
+section.channel-form-buttons{
+  display: flex; 
+  flex-direction: row-reverse;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+
+div.channel-form-modal section.channel-form-buttons button.cancel{
+  margin-right: 8px;
+  padding: 0 18px 0 18px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 0px;
+  height: 50px;
+  box-shadow: inset 0 0 0 1px rgba(29,28,29,.3);
+}
+
+div.channel-form-modal section.channel-form-buttons input[type=submit].create-channel.valid{
+  background-color: rgb(18,124,90);
+  color: white;
+}
+
+div.channel-form-modal section.channel-form-buttons input[type=submit].create-channel{
+  background-color: #ddd;
+  padding: 0 18px 0 18px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 4px;
+  text-align: center;
+  height: 50px;
+  color: rgba(29, 28, 29, 0.75);
+  width: 180px;
+}
+
+
+label#description{
+  display: block;
+  margin-bottom: 10px;
+}
+
+label#name{
+  display:block;
+  margin-bottom: 10px;
+}
+
+div.invisible{
+  display: none;
+}
+
+div.visible{
+  display: flex;
+  flex-direction: column;
+}
+
+li.channel-error{
+  margin-bottom: 5px;
+}
+.modal{
+  position: absolute;
+  z-index: 2;
+  min-height: 100%;
+  min-width: 100%;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  margin: 0 auto;
+}
+
+.modal-close-x{
+  align-self: flex-end;
+  margin: 50px 50px 0 0;
+  font-size: 2rem;
+  color: #616061;
+}
+.form-header{
+  height: 70px;
+  width: 100%;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+  background-color: white;
+}
+
+.form-backdrop{
+  background-color: #f9f9f9;
+}
+
+.sign-in-text{
+  text-align: center;
+}
+
+.login-form-header{
+  display: block;
+  width: 370px;
+}
+
+.login-form-header{
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0px;
+  font-family: 'Lato', sans-serif;
+}
+
+.workspace-url{
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.left-aligned{
+  text-align: left;
+}
+
+.session-text{
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+
+.login-form-header strong{
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
+.session-form-modal h2{
+  font-family: 'Lato', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.session-form-modal{
+  width: 634px;
+  height: 461px;
+  position: fixed;
+  left: 50%;
+  top: 333px;
+  transform: translate(-50%, -50%);
+  padding: 32px 32px 32px 16px;
+  border: 1px solid #1c7856;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px #ddd;
+  background-color: white;
+  margin-top: 30px;
+}
+
+.session-form{
+  display: flex;
+  flex-direction: column;
+  width: 369.250px;
+}
+
+.error{
+  margin-top: 15px;
+  margin-bottom: -10px;
+  color: #611f69;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+}
+
+.demo-btn{
+  display: block;
+  box-sizing: content-box;
+  background-color: #611f69;
+  max-width: 375.062px;
+  width: 100%;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  padding: 20px 0px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.demo-btn:hover{
+  background-color: #4a154b;
+}
+
+.demo-btn:focus{
+  outline-color: rgb(156, 114, 161);
+  outline-offset: 3px;
+  outline-style: dotted;
+  outline-width: 1.5px;
+}
+
+.signin-btn{
+  box-sizing: content-box;
+  background-color:#0c8566;
+  width: 100%;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  margin-top: 17px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 20px 0px;
+  font-weight: 700;
+}
+
+.signup-btn{
+  box-sizing: content-box;
+  background-color:#0c8566;
+  width: 100%;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  margin-top: 17px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 20px 0px;
+  font-weight: 700;
+}
+
+input[type=password], input[type=text]{
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 20px;
+}
+
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  font-size: 100%;
+  box-sizing: border-box;  
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  background: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+footer{
+  height: 85px;
+  width: 100%;
+  background-color: #f6f6f6;
+  margin-top: 25px;
+}
+
+.footer-list{
+  margin-right: 45px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-item{
+  margin-left: 15px;
+}
+header {
+   padding: 14px;
+   font-family: 'Montserrat', "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+.nav-bar{
+  display: flex;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 565px;
+}
+
+.logo-img{
+  width: 125px;
+  height: 51.172px;
+  margin-left: 30px;
+  margin-right: 10px;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav-links > li {
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(69,69,69);
+  font-family: 'Montserrat', "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif
+}
+
+.nav-links > li:hover{
+  color: black;
+  transition: 0.3s;
+  transition-timing-function: ease;
+}
+
+.nav-session{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-btn{
+  margin: 30px;
+  padding: 10px 12px;
+}
+.btn{
+  background-color: rgb(97, 31, 105);
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.btn:hover{
+  background-color: #4a154b;
+}
+
+.btn:focus{
+  outline-color: rgb(156, 114, 161);
+  outline-offset: 3px;
+  outline-style: dotted;
+  outline-width: 1.5px;
+}
+
+.get-started-btn{
+  margin: 20px;
+  padding: 21px 40px 22px 40px;
+}
+
+.splash{
+  font-family: 'Montserrat', "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
+  color: black;
+}
+
+.splash-imagine{
+  font-family: 'Montserrat', "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 45px;
+}
+
+.small-splash-img{
+  width: 251px;
+  position: absolute;
+  top: 230px;
+  left: 80px;
+  z-index: -1;
+}
+
+.big-splash-img{
+  width: 502px;
+  height: 502px;
+  position: relative;
+}
+
+.medium-splash-img{
+  width: 316px;
+  height: 316px;
+  position: relative;
+}
+
+p .splash-text {
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 5px 90px 35px 0px;
+  margin-bottom: 1px;
+}
+
+.splash-main{
+  display: flex;
+}
+
+.right-splash{
+  margin-left: -15px;
+}
+
+.app-description{
+  display: block;
+  max-width: 440px;
+  margin-bottom: -1px;
+}
+
+aside{
+  margin-top: 16px;
+  margin-bottom: 35px;
+  margin-right: 1px;
+  font-size: 14px;
+}
+
+aside > a {
+  color: #1264a3;
+  text-decoration: underline;
+}
+
+form .get-started-input{
+  padding: 18.4px 16px;
+  border: 1px solid rgb(105,105,105);
+  border-radius: 4px;
+  margin-top: 20px;
+  max-width: 251px;
+  height: 60px;
+  font-size: 16px;
+}
+
+.get-started-form{
+  display: flex;
+  align-content: center;
+  min-width: 440px;
+}
+
+
+figcaption{
+  font-size: 13px;
+  color:rgb(105,105,105);
+  margin-top: 6px;
+}
+
+figure{
+    margin-left: 195px;
+}
+
+input[type=text], input[type=password]{
+  padding: 18.4px 16px;
+  border: 1px solid rgb(105,105,105);
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.get-started-wrapper{
+  height: 80px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
